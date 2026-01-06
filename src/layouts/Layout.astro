@@ -26,6 +26,32 @@ const lang = getLangFromUrl(Astro.url);
         <!-- Canonical URL -->
         <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
 
+        <!-- Hreflang for International SEO -->
+        <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />
+        <link rel="alternate" hreflang="en" href={new URL('/', Astro.site)} />
+        <link rel="alternate" hreflang="es" href={new URL('/es/', Astro.site)} />
+        <link rel="alternate" hreflang="de" href={new URL('/de/', Astro.site)} />
+        <link rel="alternate" hreflang="fr" href={new URL('/fr/', Astro.site)} />
+        <link rel="alternate" hreflang="pt" href={new URL('/pt/', Astro.site)} />
+        <link rel="alternate" hreflang="ja" href={new URL('/ja/', Astro.site)} />
+        <link rel="alternate" hreflang="ko" href={new URL('/ko/', Astro.site)} />
+        <link rel="alternate" hreflang="ar" href={new URL('/ar/', Astro.site)} />
+        <link rel="alternate" hreflang="it" href={new URL('/it/', Astro.site)} />
+        <link rel="alternate" hreflang="nl" href={new URL('/nl/', Astro.site)} />
+        <link rel="alternate" hreflang="pl" href={new URL('/pl/', Astro.site)} />
+        <link rel="alternate" hreflang="ru" href={new URL('/ru/', Astro.site)} />
+        <link rel="alternate" hreflang="uk" href={new URL('/ua/', Astro.site)} />
+        <link rel="alternate" hreflang="ro" href={new URL('/ro/', Astro.site)} />
+        <link rel="alternate" hreflang="hu" href={new URL('/hu/', Astro.site)} />
+        <link rel="alternate" hreflang="el" href={new URL('/el/', Astro.site)} />
+        <link rel="alternate" hreflang="cs" href={new URL('/cz/', Astro.site)} />
+        <link rel="alternate" hreflang="tr" href={new URL('/tr/', Astro.site)} />
+        <link rel="alternate" hreflang="id" href={new URL('/id/', Astro.site)} />
+        <link rel="alternate" hreflang="fil" href={new URL('/ph/', Astro.site)} />
+        <link rel="alternate" hreflang="th" href={new URL('/th/', Astro.site)} />
+        <link rel="alternate" hreflang="vi" href={new URL('/vi/', Astro.site)} />
+        <link rel="alternate" hreflang="zh-Hant" href={new URL('/cn/', Astro.site)} />
+
         <!-- Open Graph -->
         <meta property="og:type" content="website" />
         <meta property="og:url" content={Astro.url} />
