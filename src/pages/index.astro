@@ -14,107 +14,114 @@ const IconPlaylist = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
 <Layout title="Convert2MP3 - The Best Online Video Converter">
   <Header />
   
-  <!-- Red Top Border Accent similar to reference -->
-  <div class="fixed top-0 left-0 w-full h-1 bg-brand-red z-50"></div>
+  <!-- Violet Top Border Accent -->
+  <div class="fixed top-0 left-0 w-full h-1 bg-violet-600 z-50 shadow-[0_0_15px_rgba(124,58,237,0.5)]"></div>
 
-  <main class="bg-[#1a1b26] text-white overflow-hidden">
+  <main class="bg-slate-900 text-slate-200 overflow-hidden min-h-screen">
     
     <!-- HERO SECTION -->
-    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-b from-[#1a1b26] to-[#16161e]">
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 text-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800 via-slate-900 to-slate-950">
       <div class="max-w-4xl mx-auto">
-        <h1 class="text-4xl sm:text-5xl font-bold text-amber-400 mb-6 drop-shadow-sm">
-          Your Premier Online Video Converter
+        <h1 class="text-4xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400 mb-6 drop-shadow-sm tracking-tight">
+          The Ultimate Video Conversion Tool
         </h1>
-        <p class="text-lg text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-          Convert2MP3 allows you to download videos instantly from platforms like YouTube, Dailymotion, and more. Transform content into MP3 or MP4 formats online. Fast, secure, and completely free.
+        <p class="text-lg sm:text-xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
+          Experience the fastest way to transform online videos into high-quality MP3s and MP4s. 
+          Universal compatibility with YouTube, Dailymotion, and more. 
+          <span class="text-sky-400 font-medium">No limits, no ads, just speed.</span>
         </p>
 
         <!-- Widget Wrapper -->
-        <div class="mb-8">
+        <div class="mb-10 relative z-10">
           <ConverterWidget client:load lang="en" />
         </div>
         
-        <p class="text-sm text-gray-500 max-w-2xl mx-auto">
-          Simply enter a keyword to search or paste your link directly. Popular music videos are just a click away.
+        <p class="text-sm text-slate-500 max-w-lg mx-auto">
+          Start simply: Search for a song title or paste a direct video link above.
         </p>
       </div>
     </section>
 
     <!-- STEPS BAR -->
-    <section class="border-y border-white/5 bg-white/5 py-4">
+    <section class="border-y border-white/5 bg-slate-950/50 py-8 backdrop-blur-sm">
       <div class="max-w-6xl mx-auto px-4">
-        <h3 class="text-center text-amber-400 font-semibold mb-6">How does Convert2MP3 work? It's simple:</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-sm text-gray-300">
-          <div class="flex items-center flex-col md:flex-row gap-4 justify-center">
-             <div class="font-bold text-white uppercase text-xs tracking-wider">Step 1</div>
-             <div>Find your video on YouTube, Dailymotion, or Clipfish.</div>
+        <h3 class="text-center text-violet-300 font-semibold mb-8 uppercase tracking-widest text-xs">Launch Your Conversion in 3 Steps</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center text-sm text-slate-400">
+          <div class="flex flex-col items-center gap-3 transition-colors hover:text-white group">
+             <div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center font-bold text-violet-400 group-hover:border-violet-500 group-hover:bg-violet-500/10 transition-all">1</div>
+             <p>Locate your favorite video on YouTube, Dailymotion, or Clipfish.</p>
           </div>
-          <div class="flex items-center flex-col md:flex-row gap-4 justify-center">
-             <div class="font-bold text-white uppercase text-xs tracking-wider">Step 2</div>
-             <div>Copy the video link and paste it in the box above.</div>
+          <div class="flex flex-col items-center gap-3 transition-colors hover:text-white group">
+             <div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center font-bold text-violet-400 group-hover:border-violet-500 group-hover:bg-violet-500/10 transition-all">2</div>
+             <p>Copy the video URL and paste it into the search bar shown above.</p>
           </div>
-          <div class="flex items-center flex-col md:flex-row gap-4 justify-center">
-             <div class="font-bold text-white uppercase text-xs tracking-wider">Step 3</div>
-             <div>Select your format, convert, and download anywhere.</div>
+          <div class="flex flex-col items-center gap-3 transition-colors hover:text-white group">
+             <div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center font-bold text-violet-400 group-hover:border-violet-500 group-hover:bg-violet-500/10 transition-all">3</div>
+             <p>Choose your target format (MP3/MP4), hit convert, and save freely.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- INTRO TEXT -->
-    <section class="py-16 px-4">
-      <div class="max-w-5xl mx-auto text-center">
-        <h2 class="text-3xl font-bold text-brand-red mb-8">Efficient YouTube to MP3 Conversion</h2>
-        <p class="text-gray-400 leading-8 text-lg mb-8">
-          Welcome to Convert2MP3, the modern and user-friendly evolution of classic video conversion. We aim to honor the legacy of reliable tools while building our own traditions: zero ads, zero redirects, and zero popups. We've optimized YouTube search directly on our homepage, so you don't even need to copy-paste URLs—just search and download. For other platforms like Twitch or Vimeo, our standard converter works flawlessly. Convert2MP3 features its own web-app experience, ensuring your MP3s are easy to tag with correct artist data, thumbnails, and ID3 tags. Experience a better way to convert.
+    <section class="py-20 px-4">
+      <div class="max-w-4xl mx-auto text-center space-y-8">
+        <h2 class="text-3xl font-bold text-white">
+          <span class="text-violet-500">Intelligent</span> Audio Extraction
+        </h2>
+        <p class="text-slate-400 leading-8 text-lg font-light">
+          Convert2MP3 represents the next generation of media tools. We've stripped away the annoyance of pop-ups and invasive ads to bring you a pure, streamlined experience.
+          Our integrated search engine means you never have to leave the site to find the content you love. 
+          Whether it's a rare track on Soundcloud or a trending clip on Vimeo, our robust engine handles it all.
+          Plus, our smart-tagging system ensures your downloaded library looks pristine with correct album art and metadata.
         </p>
       </div>
     </section>
 
     <!-- FEATURES GRID -->
-    <section class="py-12 bg-black/20">
-      <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+    <section class="py-16 bg-slate-950/30 border-y border-white/5">
+      <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
         
         <!-- Feature 1 -->
-        <div class="flex gap-6">
-          <div class="shrink-0" set:html={IconSearch} />
+        <div class="flex gap-6 items-start">
+          <div class="shrink-0 p-3 bg-violet-500/10 rounded-xl text-violet-400" set:html={IconSearch} />
           <div>
-            <h3 class="text-xl font-bold text-amber-400 mb-2">MP3 Audio Converter</h3>
-            <p class="text-gray-400 text-sm leading-6">
-              Our core feature is the YouTube to MP3 engine. Easily find music on YouTube, convert the video into high-quality audio files, and save them to your device for offline listening without restrictions.
+            <h3 class="text-xl font-bold text-white mb-3">High-Fidelity Audio</h3>
+            <p class="text-slate-400 text-sm leading-6">
+              Don't compromise on sound. Our engine extracts audio tracks with precision, ensuring bit-perfect quality for your offline music library on any device.
             </p>
           </div>
         </div>
 
         <!-- Feature 2 -->
-        <div class="flex gap-6">
-          <div class="shrink-0" set:html={IconDownload} />
+        <div class="flex gap-6 items-start">
+          <div class="shrink-0 p-3 bg-sky-500/10 rounded-xl text-sky-400" set:html={IconDownload} />
           <div>
-            <h3 class="text-xl font-bold text-amber-400 mb-2">Video Downloader</h3>
-            <p class="text-gray-400 text-sm leading-6">
-              Convert2MP3 helps you secure video files from YouTube in various formats. We support 1080p, 2K, 4K, and even full-length movies or TV show episodes without geo-blocking limitations.
+            <h3 class="text-xl font-bold text-white mb-3">Universal Video Downloader</h3>
+            <p class="text-slate-400 text-sm leading-6">
+              Grab video content in stunning resolutions ranging from 1080p HD to 4K Ultra HD. We support full downloads without length restrictions or geo-blocks.
             </p>
           </div>
         </div>
 
         <!-- Feature 3 -->
-        <div class="flex gap-6">
-          <div class="shrink-0" set:html={IconVideo} />
+        <div class="flex gap-6 items-start">
+          <div class="shrink-0 p-3 bg-fuchsia-500/10 rounded-xl text-fuchsia-400" set:html={IconVideo} />
           <div>
-            <h3 class="text-xl font-bold text-amber-400 mb-2">Support for Dailymotion</h3>
-             <p class="text-gray-400 text-sm leading-6">
-              Our tool isn't just for YouTube. It works perfectly with Dailymotion, offering the same high-quality MP4 and MP3 options. We cover all sources with robust format support.
+            <h3 class="text-xl font-bold text-white mb-3">Multi-Platform Support</h3>
+            <p class="text-slate-400 text-sm leading-6">
+              Beyond YouTube, our system seamlessly integrates with Dailymotion, Clipfish, and more, offering consistent format options and download speeds across the web.
             </p>
           </div>
         </div>
 
         <!-- Feature 4 -->
-        <div class="flex gap-6">
-          <div class="shrink-0" set:html={IconPlaylist} />
+        <div class="flex gap-6 items-start">
+          <div class="shrink-0 p-3 bg-indigo-500/10 rounded-xl text-indigo-400" set:html={IconPlaylist} />
           <div>
-             <h3 class="text-xl font-bold text-amber-400 mb-2">Playlist Support</h3>
-             <p class="text-gray-400 text-sm leading-6">
-              Copy a playlist URL from YouTube or Dailymotion, paste it, and hit the blue button. Convert2MP3 can handle lists of up to 200 videos, making it easy to archive entire collections.
+            <h3 class="text-xl font-bold text-white mb-3">Batch Playlist Processing</h3>
+            <p class="text-slate-400 text-sm leading-6">
+              Archive entire series or albums in one go. Paste a playlist link and let our system parse up to 200 videos for sequential downloading.
             </p>
           </div>
         </div>
@@ -123,55 +130,46 @@ const IconPlaylist = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
     </section>
 
     <!-- SOCIAL / EXTRA TEXT -->
-    <section class="py-16 px-4 text-center">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-2xl font-bold text-amber-400 mb-6">Download from Facebook, Instagram, Twitter & More</h2>
-        <p class="text-gray-400 text-sm leading-7">
-          Convert2MP3 interacts with nearly 500 different websites. Whether it's social giants like Facebook, Reddit, Instagram, Twitter, or VK, or video hubs like Vimeo and Twitch, we have you covered. Even news sites and anime portals are supported. Convert2MP3 is the only tool you need to save educational videos, podcasts, music, and movies from the vast reach of the internet.
+    <section class="py-20 px-4 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold text-white mb-6">Supported Across the Web</h2>
+        <p class="text-slate-400 text-sm leading-7">
+          Our reach extends to hundreds of platforms. From social media giants like Facebook, Instagram, and Twitter (X) to specialized hubs like Twitch and VK.
+          Convert2MP3 provides a single, unified interface to save the educational, entertainment, and news content that matters to you.
         </p>
       </div>
     </section>
 
     <!-- BOTTOM ACTIONS -->
-    <section class="py-20 bg-white/5 border-t border-white/5 border-dashed">
-      <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-16">
+    <section class="py-24 bg-gradient-to-br from-violet-900/20 to-slate-900 border-t border-white/5">
+      <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
         
         <!-- App Install -->
-        <div class="text-center space-y-6">
-          <h3 class="text-xl font-bold text-amber-400">Install Convert2MP3 App</h3>
-          <button class="bg-[#5c6bc0] hover:bg-[#3f51b5] text-white px-8 py-3 rounded uppercase font-bold text-sm tracking-wide shadow-lg transition-all transform hover:scale-105">
+        <div class="bg-slate-800/50 p-8 rounded-2xl border border-white/5 text-center space-y-6 hover:border-violet-500/30 transition-colors group">
+          <h3 class="text-xl font-bold text-white group-hover:text-violet-400 transition-colors">Get the Web App</h3>
+          <button class="bg-violet-600 hover:bg-violet-500 text-white px-8 py-3 rounded-xl uppercase font-bold text-sm tracking-wide shadow-lg shadow-violet-900/20 transition-all transform hover:-translate-y-1">
             Add to Home Screen
           </button>
-          <p class="text-gray-400 text-xs leading-5 text-left">
-            Simply tap the button to add our official web app to your device. It works exactly like a native app—no updates or subscriptions required. It takes zero space and offers the fastest way to access your favorite converter on Android and iOS.
+          <p class="text-slate-400 text-xs leading-5 text-left">
+            Install our Progressive Web App (PWA) on Android or iOS. No app store needed—just instant, lightweight access to conversion tools directly from your home screen.
           </p>
         </div>
 
         <!-- Bookmarklet -->
-        <div class="text-center space-y-6">
-           <h3 class="text-xl font-bold text-amber-400">Quick-Access Bookmarklet</h3>
-           <button class="bg-[#42a5f5] hover:bg-[#2196f3] text-white px-8 py-3 rounded uppercase font-bold text-sm tracking-wide shadow-lg transition-all cursor-move">
+        <div class="bg-slate-800/50 p-8 rounded-2xl border border-white/5 text-center space-y-6 hover:border-sky-500/30 transition-colors group">
+           <h3 class="text-xl font-bold text-white group-hover:text-sky-400 transition-colors">Browser Shortcut</h3>
+           <button class="bg-sky-500 hover:bg-sky-400 text-slate-900 px-8 py-3 rounded-xl uppercase font-bold text-sm tracking-wide shadow-lg shadow-sky-900/20 transition-all cursor-move transform hover:-translate-y-1">
             Download MP4
           </button>
-           <p class="text-gray-400 text-xs leading-5 text-left">
-            For desktop users, drag and drop the button above to your bookmarks bar. Next time you are watching a video, simply click the bookmark to instantly open Convert2MP3 with the video ready to download. A powerful shortcut for power users.
+           <p class="text-slate-400 text-xs leading-5 text-left">
+            Desktop power user? Drag this button to your bookmarks bar. Click it while watching any video to instantly jump to the download page. Efficiency at its finest.
           </p>
         </div>
 
       </div>
     </section>
 
-    <!-- EMAIL / CONTACT -->
-    <section class="py-12 text-center border-t border-white/5 border-dashed">
-      <p class="text-gray-500 mb-2">e-mail - for all your wishes and suggestions</p>
-      <p class="text-lg text-gray-300">Please, drop some Convert2MP3 knowledge on your friends and relatives!</p>
-      
-      <!-- Social Shares -->
-      <div class="flex justify-center gap-6 mt-8">
-        <a href="#" class="text-gray-400 hover:text-white transition-colors"><span class="sr-only">Share</span><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></a>
-        <a href="#" class="text-gray-400 hover:text-white transition-colors"><span class="sr-only">Like</span><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"/></svg></a>
-      </div>
-    </section>
+
 
   </main>
 

@@ -76,19 +76,19 @@ export default function LanguageSelector({ currentLang = 'en' }: Props) {
             </button>
 
             {isOpen && (
-                <div className="absolute right-0 mt-2 w-48 max-h-80 overflow-y-auto bg-zinc-900 border border-white/10 rounded-xl shadow-2xl z-50">
-                    <div className="py-2">
-                        {languages.map((lang) => (
-                            <button
-                                key={lang.code}
-                                onClick={() => handleSelect(lang.code)}
-                                className={`w-full text-left px-4 py-2.5 text-sm hover:bg-white/10 transition-colors ${currentLang === lang.code ? 'text-brand-red' : 'text-white/80'
-                                    }`}
-                            >
-                                {lang.name}
-                            </button>
-                        ))}
-                    </div>
+                <div className="absolute right-0 mt-2 w-48 max-h-80 overflow-y-auto bg-slate-800 border border-slate-700 rounded-xl shadow-2xl shadow-black/50 z-50 py-1">
+                    {languages.map((lang) => (
+                        <button
+                            key={lang.code}
+                            onClick={() => handleSelect(lang.code)}
+                            className={`w-full text-left px-4 py-2.5 text-sm transition-colors ${currentLang === lang.code
+                                    ? 'bg-violet-600 text-white font-medium'
+                                    : 'text-slate-300 hover:bg-slate-700 hover:text-white'
+                                }`}
+                        >
+                            {lang.name}
+                        </button>
+                    ))}
                 </div>
             )}
         </div>

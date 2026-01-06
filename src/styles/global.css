@@ -4,9 +4,18 @@
   --font-display: 'Outfit', sans-serif;
   --font-body: 'Outfit', sans-serif;
   
-  --color-brand-red: #ff0000;
-  --color-brand-dark: #0a0a0a;
-  --color-brand-card: #18181b;
+  /* Deep Slate Theme */
+  --color-brand-dark: #0f172a;
+  
+  /* Violet Primary */
+  --color-brand-primary: #7c3aed;
+  
+  /* Sky Secondary */
+  --color-brand-secondary: #38bdf8;
+  
+  /* Semantic Aliases */
+  --color-brand-red: var(--color-brand-primary); /* For compatibility */
+  --color-brand-card: #1e293b; /* lighter slate for cards */
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
@@ -14,7 +23,7 @@
 @layer base {
   html {
     background-color: var(--color-brand-dark);
-    color: #fafafa;
+    color: #e2e8f0; /* slate-200 */
     font-family: var(--font-body);
   }
 }
