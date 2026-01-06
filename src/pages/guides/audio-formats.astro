@@ -3,8 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
-const title = "Audio Formats Explained: The Science of Sound";
-const description = "MP3 vs AAC vs M4A. We dive deep into psychoacoustics, bitrates, and why 320kbps is the holy grail of online audio.";
+const title = "Audio Formats Explained: The Science of Sound (2026)";
+const description = "MP3 vs AAC vs FLAC vs Opus. We dive deep into psychoacoustics, bitrates, sampling rates, and why 320kbps is the holy grail of online audio.";
 const publishDate = new Date('2026-01-06').toISOString();
 ---
 
@@ -21,16 +21,16 @@ const publishDate = new Date('2026-01-06').toISOString();
           MP3 vs AAC: The Science of Sound
         </h1>
         <p class="text-xl text-slate-400 max-w-2xl mx-auto font-light">
-           We break down the acronyms to help you hear what you've been missing.
+           We break down the acronyms to help you hear what you've been missing. A complete masterclass on digital audio.
         </p>
       </header>
       
       <!-- INTRO -->
       <p>
-        You click "Download". You see a dropdown: MP3, M4A, AAC. You panic and just click the first one. Sound familiar?
+        You click "Download". You see a dropdown: MP3, M4A, AAC, maybe even WAV. You panic and just click the first one. Sound familiar?
       </p>
       <p>
-        Digital audio isn't magic. It's math. And the format you choose determines exactly how much of that math makes it to your eardrums. Today, we're going to look under the hood of audio compression to understand exactly what happens when you shrink a song.
+        Digital audio isn't magic. It's math. And the format you choose determines exactly how much of that math makes it to your eardrums. In 2026, storage is cheap and 5G is everywhere, yet we still obsess over compression. Why? Because streaming platforms like Spotify, YouTube, and Apple Music serve billions of users, and bandwidth is money. Today, we're going to look under the hood of audio compression to understand exactly what happens when you shrink a song.
       </p>
 
       <!-- PSYCHOACOUSTICS -->
@@ -38,17 +38,47 @@ const publishDate = new Date('2026-01-06').toISOString();
         <div class="absolute inset-0 bg-indigo-500/5 patterned-grid pointer-events-none"></div>
         <h2 class="text-3xl font-bold text-white mb-6 relative z-10">The Magic Trick: Psychoacoustics</h2>
         <p class="text-slate-300 relative z-10">
-            Here is a wild fact: <strong>MP3s work by deleting data that your brain doesn't notice.</strong>
+            Before we talk file formats, we need to talk about your brain. The entire MP3 industry is built on a biological hack called <strong>"Psychoacoustics"</strong>.
         </p>
         <p class="text-slate-300 relative z-10">
-            Scientists discovered that if a loud drum beat hits at the exact same millisecond as a quiet flute note, the human ear <em>physically cannot hear the flute</em>. It's called "Auditory Masking". So, the MP3 algorithm ruthlessly deletes that flute note to save space. When done aggressively (low bitrate), the music sounds "watery" or "swirly". When done well (high bitrate), it's imperceptible.
+            Here is a wild fact: <strong>MP3s work by deleting data that your brain doesn't notice.</strong> Scientists discovered that if a loud drum beat hits at the exact same millisecond as a quiet flute note, the human ear <em>physically cannot hear the flute</em>. It's called "Auditory Masking".
         </p>
+        <p class="text-slate-300 relative z-10">
+            So, the MP3 algorithm ruthlessly deletes that flute note to save space. It also cuts off frequencies above 20kHz (which only dogs can hear) and below 20Hz (which you feel more than hear). When done aggressively (low bitrate), the music sounds "watery", "swirly", or "underwater". When done well (high bitrate), it's imperceptible to 99.9% of humans.
+        </p>
+      </div>
+
+      <!-- BITRATE VS SAMPLE RATE -->
+      <h2 class="text-3xl font-bold text-white mt-16 mb-8 text-center">Bitrate vs. Sample Rate: The Confusion</h2>
+      <p>
+        These two terms get mixed up constantly. Let's clear it up.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-indigo-900/10 p-6 rounded-2xl border border-indigo-500/20">
+            <strong class="text-white text-xl block mb-2">Sample Rate (Hz)</strong>
+            <p class="text-slate-400 text-sm">
+                <strong>The "FPS" of Audio.</strong> Just like a video is a series of still images (frames), digital audio is a series of snapshots (samples) of a soundwave.
+                <br/><br/>
+                Standard CD quality is <strong>44,100 Hz</strong> (44.1kHz). This means the audio is "photographed" 44,100 times per second. This is the math required to capture frequencies up to 20kHz (the limit of human hearing).
+            </p>
+        </div>
+        <div class="bg-indigo-900/10 p-6 rounded-2xl border border-indigo-500/20">
+            <strong class="text-white text-xl block mb-2">Bitrate (kbps)</strong>
+            <p class="text-slate-400 text-sm">
+                <strong>The "Resolution" of Audio.</strong> If Sample Rate is how <em>often</em> we take a snapshot, Bitrate is how much <em>detail</em> is in each snapshot.
+                <br/><br/>
+                Higher bitrate = Less compression = Better sound. 
+                <br/>• <strong>128kbps:</strong> OK (Radio quality)
+                <br/>• <strong>320kbps:</strong> Great (Near-CD quality)
+                <br/>• <strong>1411kbps:</strong> Perfect (CD/WAV quality)
+            </p>
+        </div>
       </div>
 
       <!-- THE CONTENDERS -->
       <h2 class="text-3xl font-bold text-white mt-16 mb-8 text-center">The Heavyweights</h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 my-10">
         <!-- MP3 -->
         <div class="bg-slate-800 p-8 rounded-2xl border-t-8 border-violet-500 hover:-translate-y-2 transition-transform duration-300 shadow-xl">
             <h3 class="text-4xl font-black text-white mb-2 mt-0">MP3</h3>
@@ -63,14 +93,14 @@ const publishDate = new Date('2026-01-06').toISOString();
                     <span class="text-green-400 font-bold">✓</span> <span class="text-slate-300">Fully editable metadata (ID3 tags)</span>
                 </li>
                  <li class="flex items-center gap-3">
-                    <span class="text-red-400 font-bold">✗</span> <span class="text-slate-300">Older tech; needs higher bitrates for quality</span>
+                    <span class="text-red-400 font-bold">✗</span> <span class="text-slate-300">Older tech; needs higher bitrates (320kbps) to sound good</span>
                 </li>
             </ul>
         </div>
 
         <!-- AAC -->
         <div class="bg-slate-800 p-8 rounded-2xl border-t-8 border-sky-500 hover:-translate-y-2 transition-transform duration-300 shadow-xl">
-            <h3 class="text-4xl font-black text-white mb-2 mt-0">AAC/M4A</h3>
+            <h3 class="text-4xl font-black text-white mb-2 mt-0">AAC / M4A</h3>
             <span class="text-xs font-bold uppercase tracking-widest text-sky-400 mb-4 block">The Modern Standard</span>
             <p class="text-slate-400 text-sm mb-6">Advanced Audio Coding. The engine behind Apple Music and YouTube.</p>
             
@@ -82,7 +112,26 @@ const publishDate = new Date('2026-01-06').toISOString();
                     <span class="text-green-400 font-bold">✓</span> <span class="text-slate-300">Native format for iPhones/Macs</span>
                 </li>
                  <li class="flex items-center gap-3">
-                    <span class="text-red-400 font-bold">✗</span> <span class="text-slate-300">Can be finicky on very old devices</span>
+                    <span class="text-red-400 font-bold">✗</span> <span class="text-slate-300">Can be finicky on very old devices (pre-2010)</span>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- FLAC -->
+        <div class="bg-slate-800 p-8 rounded-2xl border-t-8 border-emerald-500 hover:-translate-y-2 transition-transform duration-300 shadow-xl lg:col-span-2">
+            <h3 class="text-4xl font-black text-white mb-2 mt-0">FLAC</h3>
+            <span class="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-4 block">The Archival King</span>
+            <p class="text-slate-400 text-sm mb-6">Free Lossless Audio Codec. All the quality, half the size of WAV.</p>
+            
+            <p class="text-sm text-slate-300 mb-4">
+                FLAC is like a ZIP file for audio. It compresses the data, but when you unzip it (play it), it comes back 100% identical to the original studio master. Nothing is deleted.
+            </p>
+            <ul class="space-y-3 text-sm">
+                <li class="flex items-center gap-3">
+                    <span class="text-green-400 font-bold">✓</span> <span class="text-slate-300">Zero quality loss (Bit-perfect)</span>
+                </li>
+                 <li class="flex items-center gap-3">
+                    <span class="text-red-400 font-bold">✗</span> <span class="text-slate-300">Files are huge (30MB-50MB per song)</span>
                 </li>
             </ul>
         </div>
@@ -95,34 +144,62 @@ const publishDate = new Date('2026-01-06').toISOString();
             <thead>
                 <tr class="border-b border-slate-700">
                     <th class="py-4 px-4 text-slate-400 font-medium uppercase text-xs tracking-wider">Format</th>
+                    <th class="py-4 px-4 text-slate-400 font-medium uppercase text-xs tracking-wider">Compression</th>
                     <th class="py-4 px-4 text-slate-400 font-medium uppercase text-xs tracking-wider">Bitrate Sweet Spot</th>
-                    <th class="py-4 px-4 text-slate-400 font-medium uppercase text-xs tracking-wider">Use Case</th>
+                    <th class="py-4 px-4 text-slate-400 font-medium uppercase text-xs tracking-wider">Best For...</th>
                 </tr>
             </thead>
             <tbody class="text-slate-300 text-sm">
                 <tr class="border-b border-slate-800 hover:bg-slate-800/50">
-                    <td class="py-4 px-4 font-bold text-violet-400">MP3 128kbps</td>
-                    <td class="py-4 px-4">Standard</td>
-                    <td class="py-4 px-4">Podcasts, Audiobooks, Storage Saving</td>
+                    <td class="py-4 px-4 font-bold text-violet-400">MP3</td>
+                    <td class="py-4 px-4">Lossy</td>
+                    <td class="py-4 px-4">320kbps</td>
+                    <td class="py-4 px-4">Compatibility, Sharing, DJing</td>
                 </tr>
                 <tr class="border-b border-slate-800 hover:bg-slate-800/50">
-                    <td class="py-4 px-4 font-bold text-violet-400">MP3 320kbps</td>
-                    <td class="py-4 px-4">High (CD-Like)</td>
-                    <td class="py-4 px-4">Music Archiving, DJing, High-End Audio</td>
+                    <td class="py-4 px-4 font-bold text-sky-400">AAC/M4A</td>
+                    <td class="py-4 px-4">Lossy</td>
+                    <td class="py-4 px-4">192kbps</td>
+                    <td class="py-4 px-4">Apple Devices, efficient streaming</td>
                 </tr>
                 <tr class="border-b border-slate-800 hover:bg-slate-800/50">
-                    <td class="py-4 px-4 font-bold text-sky-400">AAC 192kbps</td>
-                    <td class="py-4 px-4">High</td>
-                    <td class="py-4 px-4">iPhone/Apple Ecosystem, Streaming</td>
+                    <td class="py-4 px-4 font-bold text-emerald-400">FLAC</td>
+                    <td class="py-4 px-4">Lossless</td>
+                    <td class="py-4 px-4">~900kbps</td>
+                    <td class="py-4 px-4">Archiving, Audiophiles</td>
+                </tr>
+                <tr class="border-b border-slate-800 hover:bg-slate-800/50">
+                    <td class="py-4 px-4 font-bold text-orange-400">Opus</td>
+                    <td class="py-4 px-4">Lossy</td>
+                    <td class="py-4 px-4">128kbps</td>
+                    <td class="py-4 px-4">YouTube Streaming (Internal), Voice chat</td>
                 </tr>
                 <tr class="hover:bg-slate-800/50">
-                    <td class="py-4 px-4 font-bold text-gray-500">FLAC/WAV</td>
-                    <td class="py-4 px-4">Lossless</td>
-                    <td class="py-4 px-4">Studio Masters (Not supported by web converters)</td>
+                    <td class="py-4 px-4 font-bold text-gray-500">WAV</td>
+                    <td class="py-4 px-4">Uncompressed</td>
+                    <td class="py-4 px-4">1411kbps</td>
+                    <td class="py-4 px-4">Music Production, Recording Studios</td>
                 </tr>
             </tbody>
         </table>
       </div>
+
+      <!-- HARDWARE FACTOR -->
+      <h2 class="text-3xl font-bold text-white mt-16 mb-6">Can You Actually Hear the Difference?</h2>
+      <p>
+        This is the million-dollar question. Be honest: do you need FLAC if you listen to music on $20 Bluetooth earbuds?
+      </p>
+      <p>
+        <strong>Probably not.</strong> Bluetooth compression often acts as a "bottleneck" that lowers quality anyway. To truly hear the difference between a 320kbps MP3 and a FLAC file, you generally need:
+      </p>
+      <ol class="space-y-2 text-slate-300 ml-4 list-decimal">
+        <li><strong>Wired Headphones:</strong> Bluetooth is getting better (LDAC/aptX), but wires are still king.</li>
+        <li><strong>Quality Gear:</strong> Headphones or speakers that cost $100+ usually have the detail retrieval to reveal artifacts.</li>
+        <li><strong>A Quiet Room:</strong> If you're on a noisy bus, you won't hear the subtle "shimmer" of a cymbal that FLAC preserves.</li>
+      </ol>
+      <p class="mt-4">
+        However, the difference between <strong>128kbps</strong> and <strong>320kbps</strong> is audible on almost <em>anything</em>—even cheap car speakers or AirPods. That's why 320kbps is the sweet spot: max quality that actually matters.
+      </p>
 
       <div class="mt-16 text-center">
         <p class="text-lg text-slate-400 mb-8">
