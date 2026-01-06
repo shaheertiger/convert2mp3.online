@@ -7,6 +7,21 @@ export const languages = {
     ja: '日本語',
     ko: '한국어',
     ar: 'العربية',
+    it: 'Italiano',
+    nl: 'Dutch',
+    pl: 'Polski',
+    ru: 'Русский',
+    ua: 'Українська',
+    ro: 'Română',
+    hu: 'Magyar',
+    el: 'Ελληνικά',
+    cz: 'Czech',
+    tr: 'Türkçe',
+    id: 'Indonesian',
+    ph: 'Filipino',
+    th: 'ไทย',
+    vi: 'Tiếng Việt',
+    cn: '繁體中文',
 } as const;
 
 export type Language = keyof typeof languages;
