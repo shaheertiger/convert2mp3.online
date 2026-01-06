@@ -1,0 +1,67 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "Is it Legal? A Guide to Media Conversion Laws";
+const description = "Understanding the legality of YouTube to MP3 conversion, Fair Use, and Personal Copying rights in 2026.";
+const publishDate = new Date('2026-01-05').toISOString();
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  
+  <main class="bg-slate-900 text-slate-200 min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+    <article class="max-w-3xl mx-auto prose prose-invert prose-violet">
+      <h1 class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400 mb-8">{title}</h1>
+      
+      <p class="lead text-xl text-slate-300 mb-8">
+        One of the most common questions we receive is: <em>"Is this legal?"</em> The answer lies in the nuance between personal use and distribution. This guide explains the landscape of media conversion in 2026.
+      </p>
+
+      <div class="bg-yellow-500/10 border-l-4 border-yellow-500 p-6 rounded-r-xl my-8">
+        <p class="text-yellow-200 m-0 text-sm">
+          <strong>Disclaimer:</strong> We are not lawyers. This information is for educational purposes only and does not constitute legal advice. Laws vary by country (US, EU, etc.).
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-4">The Concept of "Time-Shifting" & "Format-Shifting"</h2>
+      <p>
+        Many legal jurisdictions recognize <strong>Format-Shifting</strong> (converting content from one medium to another, e.g., Video to MP3) for personal use as a fair practice, similar to recording a TV show to VHS in the 90s ("Time-Shifting").
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-4">You CANNOT Do the Following:</h2>
+      <ul class="list-disc pl-5 space-y-2 text-slate-400">
+        <li><strong>Distribute Copyrighted Works</strong>: You cannot convert a copyrighted song and then host it on your own website or share the file with others.</li>
+        <li><strong>Bypass DRM</strong>: Circumventing "Digital Rights Management" encryption is illegal in the US (DMCA) and EU. Convert2MP3 does not decrypt DRM-protected content (like Spotify or Netflix streams). We only access publicly available non-DRM streams.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-12 mb-4">Terms of Service vs. Law</h2>
+      <p>
+        It is important to distinguish between breaking a website's Terms of Service (ToS) and breaking the law. YouTube's ToS prohibits downloading without a "Download" button. violating ToS may result in account bans from that platform, but it is a civil breach of contract, not necessarily a criminal act, unless copyright infringement is involved.
+      </p>
+
+      <p class="mt-8 text-slate-400">
+        <strong>Bottom Line:</strong> Convert2MP3 is a tool designed for archiving public domain content, Creative Commons works, and personal media backup. Always respect the rights of content creators.
+      </p>
+
+      <!-- Article Schema -->
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": title,
+        "image": [
+            "https://convert2mp3.online/og-image.jpg"
+        ],
+        "datePublished": publishDate,
+        "author": [{
+            "@type": "Organization",
+            "name": "Convert2MP3 Team",
+            "url": "https://convert2mp3.online"
+        }]
+      })} />
+    </article>
+  </main>
+  
+  <Footer />
+</Layout>
