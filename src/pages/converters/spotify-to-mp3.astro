@@ -1,0 +1,137 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ConverterWidget from '../../components/ConverterWidget.tsx';
+
+const title = "Spotify to MP3 Converter - Download Songs & Playlists Free";
+const description = "Convert Spotify tracks, albums, and playlists to high-quality MP3 files. Our free Spotify to MP3 converter works online without software downloads.";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+
+  <main class="bg-slate-900 text-slate-200 min-h-screen overflow-hidden">
+    
+    <!-- HERO -->
+    <section class="pt-32 pb-20 px-4 text-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-green-900/30 via-slate-900 to-slate-950">
+      <div class="max-w-4xl mx-auto">
+        <span class="text-green-400 font-bold uppercase tracking-widest text-sm mb-4 block">Spotify Downloader</span>
+        <h1 class="text-4xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400 mb-6 drop-shadow-sm tracking-tight">
+          Spotify to MP3 Converter
+        </h1>
+        <p class="text-lg sm:text-xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
+          Download your favorite Spotify songs, albums, and playlists to MP3. 
+          Listen offline without limits. <span class="text-green-400 font-medium">No Spotify Premium required.</span>
+        </p>
+
+        <div class="mb-10 relative z-10">
+          <ConverterWidget client:load lang="en" />
+        </div>
+        
+        <p class="text-sm text-slate-500 max-w-lg mx-auto">
+          Paste your Spotify track, album, or playlist link above. Works best with individual songs.
+        </p>
+      </div>
+    </section>
+
+    <!-- FEATURES / KEYWORDS -->
+    <section class="py-20 px-4 bg-slate-950/50 border-y border-white/5">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold text-white text-center mb-12">Why Use Our <span class="text-green-400">Spotify to MP3 Converter</span>?</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div class="p-8 bg-slate-800/30 rounded-2xl border border-white/5">
+            <div class="text-5xl mb-4">🎵</div>
+            <h3 class="text-xl font-bold text-white mb-2">High-Quality 320kbps</h3>
+            <p class="text-slate-400 text-sm">We extract at the highest available bitrate, ensuring crisp, clear audio that mirrors the original track on Spotify.</p>
+          </div>
+          <div class="p-8 bg-slate-800/30 rounded-2xl border border-white/5">
+            <div class="text-5xl mb-4">📱</div>
+            <h3 class="text-xl font-bold text-white mb-2">Works on All Devices</h3>
+            <p class="text-slate-400 text-sm">Whether you're on your phone in Manila or laptop in Cebu, our <strong>Spotify MP3 converter</strong> runs smoothly in any browser.</p>
+          </div>
+          <div class="p-8 bg-slate-800/30 rounded-2xl border border-white/5">
+            <div class="text-5xl mb-4">💰</div>
+            <h3 class="text-xl font-bold text-white mb-2">100% Free Forever</h3>
+            <p class="text-slate-400 text-sm">No hidden fees, no sign-ups, no premium unlocks. Just paste the link and download your music for free.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="py-20 px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-white mb-8">How to <span class="text-green-400">Convert Spotify to MP3</span></h2>
+        <ol class="space-y-6 text-left text-slate-400">
+            <li class="flex gap-4 items-start">
+                <span class="flex-shrink-0 w-8 h-8 rounded-full bg-green-600 flex items-center justify-center font-bold text-white text-sm">1</span>
+                <p><strong class="text-white">Open Spotify</strong> on your phone or computer. Find the song, album, or playlist you want to download.</p>
+            </li>
+            <li class="flex gap-4 items-start">
+                <span class="flex-shrink-0 w-8 h-8 rounded-full bg-green-600 flex items-center justify-center font-bold text-white text-sm">2</span>
+                <p><strong class="text-white">Copy the Share Link</strong>. Tap the three dots (...) menu and select "Share" > "Copy Link".</p>
+            </li>
+            <li class="flex gap-4 items-start">
+                <span class="flex-shrink-0 w-8 h-8 rounded-full bg-green-600 flex items-center justify-center font-bold text-white text-sm">3</span>
+                <p><strong class="text-white">Paste & Convert</strong>. Paste the Spotify URL into the box above, click Start, and download your MP3 file!</p>
+            </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAQ / KEYWORDS -->
+    <section class="py-20 px-4 bg-slate-950/30 border-t border-white/5">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
+        <div class="space-y-6">
+          <details class="bg-slate-800/30 rounded-xl p-4 group open:bg-slate-800/50 transition-colors cursor-pointer">
+              <summary class="font-bold text-lg text-white list-none flex justify-between items-center">
+                  <span>Is this Spotify to MP3 converter safe?</span>
+                  <span class="text-green-400 group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <div class="mt-4 text-slate-400 pl-4 border-l-2 border-green-500/20">
+                  <p>Absolutely. We don't require any login credentials, and we never ask for your Spotify password. The conversion happens through our secure servers.</p>
+              </div>
+          </details>
+
+          <details class="bg-slate-800/30 rounded-xl p-4 group open:bg-slate-800/50 transition-colors cursor-pointer">
+              <summary class="font-bold text-lg text-white list-none flex justify-between items-center">
+                  <span>Can I download entire Spotify playlists to MP3?</span>
+                  <span class="text-green-400 group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <div class="mt-4 text-slate-400 pl-4 border-l-2 border-green-500/20">
+                  <p>For best results, we recommend converting one track at a time. Playlist support may be limited depending on platform restrictions.</p>
+              </div>
+          </details>
+
+          <details class="bg-slate-800/30 rounded-xl p-4 group open:bg-slate-800/50 transition-colors cursor-pointer">
+              <summary class="font-bold text-lg text-white list-none flex justify-between items-center">
+                  <span>Do I need Spotify Premium to use this?</span>
+                  <span class="text-green-400 group-open:rotate-180 transition-transform">▼</span>
+              </summary>
+              <div class="mt-4 text-slate-400 pl-4 border-l-2 border-green-500/20">
+                  <p>No. Our converter works with free Spotify accounts. Just share the link to any publicly accessible track.</p>
+              </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+  
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Spotify to MP3 Converter",
+    "url": "https://convert2mp3.online/converters/spotify-to-mp3",
+    "description": description,
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "PHP" }
+  })} />
+</Layout>

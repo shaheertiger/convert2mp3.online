@@ -1,0 +1,107 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ConverterWidget from '../../components/ConverterWidget.tsx';
+
+const title = "Facebook to MP3 Converter - Download FB Videos to Audio Free";
+const description = "Convert Facebook videos to MP3 audio. Our free FB to MP3 converter works online. Convert FB video to MP3 without downloading software.";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+
+  <main class="bg-slate-900 text-slate-200 min-h-screen overflow-hidden">
+    
+    <!-- HERO -->
+    <section class="pt-32 pb-20 px-4 text-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/30 via-slate-900 to-slate-950">
+      <div class="max-w-4xl mx-auto">
+        <span class="text-blue-400 font-bold uppercase tracking-widest text-sm mb-4 block">Facebook Video Downloader</span>
+        <h1 class="text-4xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400 mb-6 drop-shadow-sm tracking-tight">
+          Facebook to MP3 Converter
+        </h1>
+        <p class="text-lg sm:text-xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
+          Extract audio from Facebook videos instantly. Save speeches, music clips, and interviews as MP3 files.
+          <span class="text-blue-400 font-medium">Works with public FB videos.</span>
+        </p>
+
+        <div class="mb-10 relative z-10">
+          <ConverterWidget client:load lang="en" />
+        </div>
+        
+        <p class="text-sm text-slate-500 max-w-lg mx-auto">
+          Paste the Facebook video URL above. We'll extract the audio track and convert it to MP3 for you.
+        </p>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="py-20 px-4 bg-slate-950/50 border-y border-white/5">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold text-white text-center mb-12">Free <span class="text-blue-400">Facebook to MP3 Converter</span></h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div class="p-8 bg-slate-800/30 rounded-2xl border border-white/5">
+            <div class="text-5xl mb-4">📺</div>
+            <h3 class="text-xl font-bold text-white mb-2">Convert FB Video to MP3</h3>
+            <p class="text-slate-400 text-sm">Easily turn any public Facebook video into an audio file. Perfect for saving music performances or funny sound bytes.</p>
+          </div>
+          <div class="p-8 bg-slate-800/30 rounded-2xl border border-white/5">
+            <div class="text-5xl mb-4">🔒</div>
+            <h3 class="text-xl font-bold text-white mb-2">No Login Required</h3>
+            <p class="text-slate-400 text-sm">We never ask for your Facebook credentials. Simply paste the video's public URL and we handle the rest.</p>
+          </div>
+          <div class="p-8 bg-slate-800/30 rounded-2xl border border-white/5">
+            <div class="text-5xl mb-4">🇵🇭</div>
+            <h3 class="text-xl font-bold text-white mb-2">Works in the Philippines</h3>
+            <p class="text-slate-400 text-sm">Fast servers optimized for users in the Philippines. No VPN needed, no geo-blocks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO -->
+    <section class="py-20 px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-white mb-8">How to <span class="text-blue-400">FB Convert to MP3</span></h2>
+        <ol class="space-y-6 text-left text-slate-400">
+            <li class="flex gap-4 items-start">
+                <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white text-sm">1</span>
+                <p><strong class="text-white">Find the Video on Facebook</strong>. Open the video you want to convert and click the three dots menu.</p>
+            </li>
+            <li class="flex gap-4 items-start">
+                <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white text-sm">2</span>
+                <p><strong class="text-white">Copy the Link</strong>. Select "Copy Link" to get the video URL.</p>
+            </li>
+            <li class="flex gap-4 items-start">
+                <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white text-sm">3</span>
+                <p><strong class="text-white">Paste & Download</strong>. Paste the link into the box above, hit Start, and save your MP3.</p>
+            </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- RELATED KEYWORDS / INTERNAL LINKS -->
+    <section class="py-12 px-4 bg-slate-950/30 border-t border-white/5">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-sm text-slate-500">
+                Looking for other converters? Try our <a href="/converters/spotify-to-mp3" class="text-green-400 hover:underline">Spotify to MP3 Converter</a> or the <a href="/" class="text-violet-400 hover:underline">YouTube to MP3 Converter</a>.
+            </p>
+        </div>
+    </section>
+
+  </main>
+
+  <Footer />
+  
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Facebook to MP3 Converter",
+    "url": "https://convert2mp3.online/converters/facebook-to-mp3",
+    "description": description,
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "PHP" }
+  })} />
+</Layout>
