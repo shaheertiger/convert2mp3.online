@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# 2026 Standard: Explicitly allow AI Search Agents for visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Block known abusive crawlers (Placeholder list)
+User-agent: Bytespider
+Disallow: /
+
+Sitemap: https://convert2mp3.online/sitemap-index.xml

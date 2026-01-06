@@ -2,13 +2,28 @@ import { useState, useRef, useEffect } from 'react';
 
 const languages = [
     { code: 'en', name: 'English' },
-    { code: 'es', name: 'Español' },
     { code: 'de', name: 'Deutsch' },
     { code: 'fr', name: 'Français' },
+    { code: 'es', name: 'Español' },
     { code: 'pt', name: 'Português' },
-    { code: 'ja', name: '日本語' },
+    { code: 'it', name: 'Italiano' },
+    { code: 'nl', name: 'Dutch' },
+    { code: 'pl', name: 'Polski' },
+    { code: 'ru', name: 'Русский' },
+    { code: 'ua', name: 'Українська' },
+    { code: 'ro', name: 'Română' },
+    { code: 'hu', name: 'Magyar' },
+    { code: 'el', name: 'Ελληνικά' },
+    { code: 'cz', name: 'Czech' },
+    { code: 'tr', name: 'Türkçe' },
+    { code: 'id', name: 'Indonesian' },
+    { code: 'ph', name: 'Filipino' },
+    { code: 'th', name: 'ไทย' },
+    { code: 'vi', name: 'Tiếng Việt' },
     { code: 'ko', name: '한국어' },
     { code: 'ar', name: 'العربية' },
+    { code: 'jp', name: '日本語' },
+    { code: 'cn', name: '繁體中文' },
 ];
 
 interface Props {
@@ -82,8 +97,8 @@ export default function LanguageSelector({ currentLang = 'en' }: Props) {
                             key={lang.code}
                             onClick={() => handleSelect(lang.code)}
                             className={`w-full text-left px-4 py-2.5 text-sm transition-colors ${currentLang === lang.code
-                                    ? 'bg-violet-600 text-white font-medium'
-                                    : 'text-slate-300 hover:bg-slate-700 hover:text-white'
+                                ? 'bg-violet-600 text-white font-medium'
+                                : 'text-slate-300 hover:bg-slate-700 hover:text-white'
                                 }`}
                         >
                             {lang.name}

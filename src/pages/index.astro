@@ -147,7 +147,7 @@ const IconPlaylist = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
         <!-- App Install -->
         <div class="bg-slate-800/50 p-8 rounded-2xl border border-white/5 text-center space-y-6 hover:border-violet-500/30 transition-colors group">
           <h3 class="text-xl font-bold text-white group-hover:text-violet-400 transition-colors">Get the Web App</h3>
-          <button class="bg-violet-600 hover:bg-violet-500 text-white px-8 py-3 rounded-xl uppercase font-bold text-sm tracking-wide shadow-lg shadow-violet-900/20 transition-all transform hover:-translate-y-1">
+          <button id="install-pwa" class="bg-violet-600 hover:bg-violet-500 text-white px-8 py-3 rounded-xl uppercase font-bold text-sm tracking-wide shadow-lg shadow-violet-900/20 transition-all transform hover:-translate-y-1">
             Add to Home Screen
           </button>
           <p class="text-slate-400 text-xs leading-5 text-left">
@@ -158,9 +158,13 @@ const IconPlaylist = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
         <!-- Bookmarklet -->
         <div class="bg-slate-800/50 p-8 rounded-2xl border border-white/5 text-center space-y-6 hover:border-sky-500/30 transition-colors group">
            <h3 class="text-xl font-bold text-white group-hover:text-sky-400 transition-colors">Browser Shortcut</h3>
-           <button class="bg-sky-500 hover:bg-sky-400 text-slate-900 px-8 py-3 rounded-xl uppercase font-bold text-sm tracking-wide shadow-lg shadow-sky-900/20 transition-all cursor-move transform hover:-translate-y-1">
+           <a 
+            href="javascript:(function(){window.open('https://convert2mp3.online/?url='+encodeURIComponent(window.location.href),'_blank');})();"
+            onclick="event.preventDefault(); alert('Drag this button to your bookmarks bar to install!');"
+            class="inline-block bg-sky-500 hover:bg-sky-400 text-slate-900 px-8 py-3 rounded-xl uppercase font-bold text-sm tracking-wide shadow-lg shadow-sky-900/20 transition-all cursor-move transform hover:-translate-y-1"
+           >
             Download MP4
-          </button>
+          </a>
            <p class="text-slate-400 text-xs leading-5 text-left">
             Desktop power user? Drag this button to your bookmarks bar. Click it while watching any video to instantly jump to the download page. Efficiency at its finest.
           </p>
@@ -174,4 +178,28 @@ const IconPlaylist = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBo
   </main>
 
   <Footer />
+  <script>
+    // PWA Install Logic
+    let deferredPrompt;
+    
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+    });
+
+    const installBtn = document.getElementById('install-pwa');
+    if (installBtn) {
+      installBtn.addEventListener('click', async () => {
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          const { outcome } = await deferredPrompt.userChoice;
+          console.log(`User response to the install information: ${outcome}`);
+          deferredPrompt = null;
+        } else {
+          // Fallback instructions for iOS / when prompt not available
+          alert("To install the Web App:\n\n1. Tap the 'Share' button in your browser.\n2. Scroll down and select 'Add to Home Screen'.");
+        }
+      });
+    }
+  </script>
 </Layout>
