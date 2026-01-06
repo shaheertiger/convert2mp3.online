@@ -1,0 +1,142 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ConverterWidget from '../../components/ConverterWidget.tsx';
+
+const lang = 'de';
+---
+
+<Layout title="YouTube zu MP3 Konverter - Kostenlos & Schnell | Convert2MP3">
+  <Header />
+  
+  <main class="flex-grow pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <!-- Background Accents -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-brand-red/10 blur-[120px] rounded-full -z-10 pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
+      <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white mb-6">
+        YouTube in <span class="text-brand-red bg-clip-text text-transparent bg-gradient-to-r from-brand-red to-orange-500">MP3 Umwandeln</span>
+      </h1>
+      
+      <p class="text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Der beste und schnellste YouTube Converter. Laden Sie Ihre Lieblingsmusik und Videos kostenlos in bester Qualität herunter. Keine Anmeldung erforderlich.
+      </p>
+
+      <!-- Converter Widget Island -->
+      <ConverterWidget client:load lang={lang} />
+      
+      <p class="text-xs text-white/30 uppercase tracking-widest font-medium pt-4">
+        Durch die Nutzung unseres Dienstes akzeptieren Sie unsere <a href="/terms" class="text-white/50 hover:text-white underline decoration-white/30 transition-colors">Nutzungsbedingungen</a>
+      </p>
+    </div>
+  </main>
+
+  <!-- How to Section (German) -->
+  <section class="py-20 bg-gradient-to-b from-brand-dark to-zinc-900/50 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div>
+          <h2 class="text-3xl font-bold text-white mb-8">Wie wandelt man YouTube in MP3 um?</h2>
+          <ol class="space-y-6">
+            <li class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 bg-brand-red/20 rounded-full flex items-center justify-center text-brand-red font-bold text-sm">1</span>
+              <div>
+                <h3 class="text-white font-semibold mb-1">Link Kopieren</h3>
+                <p class="text-white/50 text-sm">Öffnen Sie das gewünschte YouTube-Video und kopieren Sie die URL aus der Adressleiste.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 bg-brand-red/20 rounded-full flex items-center justify-center text-brand-red font-bold text-sm">2</span>
+              <div>
+                <h3 class="text-white font-semibold mb-1">Einfügen</h3>
+                <p class="text-white/50 text-sm">Fügen Sie den Link oben in das Eingabefeld ein und klicken Sie auf "Starten".</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 bg-brand-red/20 rounded-full flex items-center justify-center text-brand-red font-bold text-sm">3</span>
+              <div>
+                <h3 class="text-white font-semibold mb-1">Format Wählen</h3>
+                <p class="text-white/50 text-sm">Wählen Sie MP3 (Audio) oder MP4 (Video) und die gewünschte Qualität.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="flex-shrink-0 w-8 h-8 bg-brand-red/20 rounded-full flex items-center justify-center text-brand-red font-bold text-sm">4</span>
+              <div>
+                <h3 class="text-white font-semibold mb-1">Herunterladen</h3>
+                <p class="text-white/50 text-sm">Klicken Sie auf den Download-Button. Die Konvertierung startet sofort.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div>
+          <h2 class="text-3xl font-bold text-white mb-8">Vorteile von Convert2MP3</h2>
+          <ul class="space-y-5">
+            <li class="flex items-start gap-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-brand-red flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              <div>
+                <h3 class="text-white font-semibold mb-1">Kostenlos & Unbegrenzt</h3>
+                <p class="text-white/50 text-sm">Nutzen Sie unseren Service so oft Sie wollen, komplett gratis.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-brand-red flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+              <div>
+                <h3 class="text-white font-semibold mb-1">High-Speed Konvertierung</h3>
+                <p class="text-white/50 text-sm">Unsere Server wandeln Videos in Sekundenschnelle um.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-brand-red flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <div>
+                <h3 class="text-white font-semibold mb-1">Keine Registrierung</h3>
+                <p class="text-white/50 text-sm">Wir sammeln keine Daten. Einfach loslegen.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Content (Guide) -->
+  <section class="py-20 bg-brand-dark relative z-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 title-white prose prose-invert prose-lg">
+      <h2 class="text-3xl font-bold text-white mb-6">Der ultimative YouTube zu MP3 Converter für 2026</h2>
+      <p class="text-white/70 mb-6">
+        Convert2MP3 ist Ihre erste Wahl, wenn es darum geht, Videos von YouTube in hochwertige MP3-Audiodateien umzuwandeln. Egal ob Musikvideos, Podcasts, Tutorials oder Hörbücher – mit unserem Tool können Sie Inhalte offline verfügbar machen, um sie jederzeit und überall zu genießen.
+      </p>
+      
+      <h3 class="text-2xl font-bold text-white mb-4">Warum YouTube in MP3 umwandeln?</h3>
+      <p class="text-white/70 mb-6">
+        Streaming benötigt viele Daten und eine stabile Internetverbindung. Durch die Umwandlung in MP3 sparen Sie Datenvolumen und sind unabhängig von Funklöchern. Perfekt für den Weg zur Arbeit, das Fitnessstudio oder Reisen. Unser Converter garantiert dabei die bestmögliche Audioqualität (bis zu 320kbps).
+      </p>
+
+      <h3 class="text-2xl font-bold text-white mb-4">Unterstützte Formate und Qualität</h3>
+      <ul class="list-disc pl-5 text-white/70 space-y-2 mb-8">
+        <li><strong>MP3 (Audio):</strong> 64kbps, 128kbps, 192kbps, 256kbps, 320kbps</li>
+        <li><strong>MP4 (Video):</strong> 144p, 240p, 360p, 480p, 720p (HD), 1080p (Full HD), 4K</li>
+        <li><strong>WebM:</strong> Für hohe Qualität bei kleiner Dateigröße</li>
+      </ul>
+
+      <h3 class="text-2xl font-bold text-white mb-4">Häufig gestellte Fragen (FAQ)</h3>
+      <div class="space-y-6">
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-2">Ist Convert2MP3 legal?</h4>
+          <p class="text-white/70 text-sm">Das Konvertieren von Videos für den privaten, persönlichen Gebrauch ist in vielen Ländern eine Grauzone, solange Sie keinen Kopierschutz umgehen. Bitte beachten Sie unsere Nutzungsbedingungen und respektieren Sie das Urheberrecht.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-2">Funktioniert es auf dem Handy?</h4>
+          <p class="text-white/70 text-sm">Ja! Convert2MP3 ist vollständig responsiv und funktioniert problemlos auf Android (Chrome, Firefox) und iOS (Safari).</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-2">Gibt es ein Limit?</h4>
+          <p class="text-white/70 text-sm">Nein. Sie können so viele Videos konvertieren und herunterladen, wie Sie möchten.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
