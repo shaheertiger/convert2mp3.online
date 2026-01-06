@@ -3,65 +3,146 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
-const title = "Audio Formats Explained: MP3 vs AAC vs M4A";
-const description = "Understand the difference between MP3, AAC, and M4A containers. Which audio format offers the best quality for your downloads?";
-const publishDate = new Date('2026-01-05').toISOString();
+const title = "Audio Formats Explained: The Science of Sound";
+const description = "MP3 vs AAC vs M4A. We dive deep into psychoacoustics, bitrates, and why 320kbps is the holy grail of online audio.";
+const publishDate = new Date('2026-01-06').toISOString();
 ---
 
 <Layout title={title} description={description}>
   <Header />
   
-  <main class="bg-slate-900 text-slate-200 min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-    <article class="max-w-3xl mx-auto prose prose-invert prose-violet">
-      <h1 class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-400 mb-8">{title}</h1>
+  <main class="bg-slate-900 text-slate-200 min-h-screen pt-32 pb-24 px-4 sm:px-6 lg:px-8">
+    <article class="max-w-4xl mx-auto prose prose-invert prose-lg prose-indigo leading-relaxed">
       
-      <p class="lead text-xl text-slate-300 mb-8">
-        When converting videos, you are often faced with a choice: MP3 or MP4? And what about AAC? This guide breaks down the alphabet soup of audio codecs.
-      </p>
-
-      <h2 class="text-2xl font-bold text-white mt-12 mb-4">MP3 (MPEG-1 Audio Layer III)</h2>
+      <!-- HEADER -->
+      <header class="text-center mb-16">
+        <span class="text-indigo-400 font-bold uppercase tracking-widest text-sm mb-4 block">Tech & Science</span>
+        <h1 class="text-4xl sm:text-6xl font-black text-white mb-8 leading-tight">
+          MP3 vs AAC: The Science of Sound
+        </h1>
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto font-light">
+           We break down the acronyms to help you hear what you've been missing.
+        </p>
+      </header>
+      
+      <!-- INTRO -->
       <p>
-        <strong>The Universal Standard.</strong> MP3 is the most compatible audio format in history. It plays on literally everything—from 20-year-old car stereos to modern smartwatches.
+        You click "Download". You see a dropdown: MP3, M4A, AAC. You panic and just click the first one. Sound familiar?
       </p>
-      <ul class="list-disc pl-5 space-y-2 text-slate-400">
-        <li><strong>Pros</strong>: 100% Compatibility, ID3 Tag support (Cover Art, Artist Name).</li>
-        <li><strong>Cons</strong>: Older compression technology. Needs higher bitrates (320kbps) to match the quality of newer formats at lower sizes.</li>
-      </ul>
-
-      <h2 class="text-2xl font-bold text-white mt-12 mb-4">AAC (Advanced Audio Coding) / M4A</h2>
       <p>
-        <strong>The Modern Successor.</strong> Often wrapped in an <code>.m4a</code> container, AAC is the standard for YouTube streaming and Apple devices.
+        Digital audio isn't magic. It's math. And the format you choose determines exactly how much of that math makes it to your eardrums. Today, we're going to look under the hood of audio compression to understand exactly what happens when you shrink a song.
       </p>
-      <ul class="list-disc pl-5 space-y-2 text-slate-400">
-        <li><strong>Pros</strong>: Better sound quality than MP3 at the same bitrate. 192kbps AAC roughly equals 320kbps MP3.</li>
-        <li><strong>Cons</strong>: Slightly less compatibility with very old hardware.</li>
-      </ul>
 
-      <h2 class="text-2xl font-bold text-white mt-12 mb-4">Which Should You Choose?</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-        <div class="bg-violet-600/20 p-6 rounded-xl border border-violet-500/30">
-            <h3 class="text-lg font-bold text-violet-300 mt-0">Choose MP3 If:</h3>
-            <p class="text-sm text-slate-400">You need to play the file on a wide variety of devices (car stereo, old MP3 player, gaming console) and want maximum compatibility.</p>
+      <!-- PSYCHOACOUSTICS -->
+      <div class="my-16 bg-slate-800/50 p-8 rounded-3xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-indigo-500/5 patterned-grid pointer-events-none"></div>
+        <h2 class="text-3xl font-bold text-white mb-6 relative z-10">The Magic Trick: Psychoacoustics</h2>
+        <p class="text-slate-300 relative z-10">
+            Here is a wild fact: <strong>MP3s work by deleting data that your brain doesn't notice.</strong>
+        </p>
+        <p class="text-slate-300 relative z-10">
+            Scientists discovered that if a loud drum beat hits at the exact same millisecond as a quiet flute note, the human ear <em>physically cannot hear the flute</em>. It's called "Auditory Masking". So, the MP3 algorithm ruthlessly deletes that flute note to save space. When done aggressively (low bitrate), the music sounds "watery" or "swirly". When done well (high bitrate), it's imperceptible.
+        </p>
+      </div>
+
+      <!-- THE CONTENDERS -->
+      <h2 class="text-3xl font-bold text-white mt-16 mb-8 text-center">The Heavyweights</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
+        <!-- MP3 -->
+        <div class="bg-slate-800 p-8 rounded-2xl border-t-8 border-violet-500 hover:-translate-y-2 transition-transform duration-300 shadow-xl">
+            <h3 class="text-4xl font-black text-white mb-2 mt-0">MP3</h3>
+            <span class="text-xs font-bold uppercase tracking-widest text-violet-400 mb-4 block">The Legend</span>
+            <p class="text-slate-400 text-sm mb-6">MPEG-1 Audio Layer III. Born in the 90s, it changed the world.</p>
+            
+            <ul class="space-y-3 text-sm">
+                <li class="flex items-center gap-3">
+                    <span class="text-green-400 font-bold">✓</span> <span class="text-slate-300">Plays on literally anything (Toasters, probably)</span>
+                </li>
+                 <li class="flex items-center gap-3">
+                    <span class="text-green-400 font-bold">✓</span> <span class="text-slate-300">Fully editable metadata (ID3 tags)</span>
+                </li>
+                 <li class="flex items-center gap-3">
+                    <span class="text-red-400 font-bold">✗</span> <span class="text-slate-300">Older tech; needs higher bitrates for quality</span>
+                </li>
+            </ul>
         </div>
-        <div class="bg-sky-600/20 p-6 rounded-xl border border-sky-500/30">
-            <h3 class="text-lg font-bold text-sky-300 mt-0">Choose MP4/AAC If:</h3>
-            <p class="text-sm text-slate-400">You want the absolute best quality-to-size ratio and are primarily playback on smartphones or modern computers.</p>
+
+        <!-- AAC -->
+        <div class="bg-slate-800 p-8 rounded-2xl border-t-8 border-sky-500 hover:-translate-y-2 transition-transform duration-300 shadow-xl">
+            <h3 class="text-4xl font-black text-white mb-2 mt-0">AAC/M4A</h3>
+            <span class="text-xs font-bold uppercase tracking-widest text-sky-400 mb-4 block">The Modern Standard</span>
+            <p class="text-slate-400 text-sm mb-6">Advanced Audio Coding. The engine behind Apple Music and YouTube.</p>
+            
+            <ul class="space-y-3 text-sm">
+                <li class="flex items-center gap-3">
+                    <span class="text-green-400 font-bold">✓</span> <span class="text-slate-300">More efficient; sounds better at smaller sizes</span>
+                </li>
+                 <li class="flex items-center gap-3">
+                    <span class="text-green-400 font-bold">✓</span> <span class="text-slate-300">Native format for iPhones/Macs</span>
+                </li>
+                 <li class="flex items-center gap-3">
+                    <span class="text-red-400 font-bold">✗</span> <span class="text-slate-300">Can be finicky on very old devices</span>
+                </li>
+            </ul>
         </div>
       </div>
 
-      <p class="mt-8">
-        Convert2MP3 optimizes for <strong>MP3</strong> by default because compatibility is usually the #1 priority for our users, ensuring your music works everywhere.
-      </p>
+      <!-- COMPARISON TABLE -->
+      <h2 class="text-3xl font-bold text-white mt-16 mb-8">Quick Comparison Cheat-Sheet</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+            <thead>
+                <tr class="border-b border-slate-700">
+                    <th class="py-4 px-4 text-slate-400 font-medium uppercase text-xs tracking-wider">Format</th>
+                    <th class="py-4 px-4 text-slate-400 font-medium uppercase text-xs tracking-wider">Bitrate Sweet Spot</th>
+                    <th class="py-4 px-4 text-slate-400 font-medium uppercase text-xs tracking-wider">Use Case</th>
+                </tr>
+            </thead>
+            <tbody class="text-slate-300 text-sm">
+                <tr class="border-b border-slate-800 hover:bg-slate-800/50">
+                    <td class="py-4 px-4 font-bold text-violet-400">MP3 128kbps</td>
+                    <td class="py-4 px-4">Standard</td>
+                    <td class="py-4 px-4">Podcasts, Audiobooks, Storage Saving</td>
+                </tr>
+                <tr class="border-b border-slate-800 hover:bg-slate-800/50">
+                    <td class="py-4 px-4 font-bold text-violet-400">MP3 320kbps</td>
+                    <td class="py-4 px-4">High (CD-Like)</td>
+                    <td class="py-4 px-4">Music Archiving, DJing, High-End Audio</td>
+                </tr>
+                <tr class="border-b border-slate-800 hover:bg-slate-800/50">
+                    <td class="py-4 px-4 font-bold text-sky-400">AAC 192kbps</td>
+                    <td class="py-4 px-4">High</td>
+                    <td class="py-4 px-4">iPhone/Apple Ecosystem, Streaming</td>
+                </tr>
+                <tr class="hover:bg-slate-800/50">
+                    <td class="py-4 px-4 font-bold text-gray-500">FLAC/WAV</td>
+                    <td class="py-4 px-4">Lossless</td>
+                    <td class="py-4 px-4">Studio Masters (Not supported by web converters)</td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
 
-      <!-- Article Schema -->
+      <div class="mt-16 text-center">
+        <p class="text-lg text-slate-400 mb-8">
+            So, which one wins? 
+            <br/><br/>
+            <strong>For 99% of people, MP3 at 320kbps is the perfect balance.</strong> It works everywhere, sounds fantastic, and will still be readable by computers in 50 years. That's why Convert2MP3 defaults to high-quality settings.
+        </p>
+      </div>
+
+      <!-- ARTICLE SCHEMA -->
       <script type="application/ld+json" set:html={JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": title,
+        "description": description,
         "image": [
             "https://convert2mp3.online/og-image.jpg"
         ],
         "datePublished": publishDate,
+        "dateModified": new Date().toISOString(),
         "author": [{
             "@type": "Organization",
             "name": "Convert2MP3 Team",
