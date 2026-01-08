@@ -804,4 +804,55 @@ const t = useTranslations(lang);
   </section>
 
   <Footer />
+
+  <!-- FAQPage Schema for Rich Snippets -->
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Is Convert2MP3 free to use?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes! Convert2MP3 is 100% free. There are no hidden fees, subscriptions, or paywalls. We believe everyone should have access to offline media.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What quality can I download?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We support up to 320kbps for MP3 audio (CD quality) and 4K Ultra HD for video. Select your preferred quality before downloading.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Is it safe to use?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Absolutely. We use SSL encryption, don't store personal data, and never require you to install suspicious software. Your files are deleted from our servers automatically.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Does it work on iPhone/Android?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes! Convert2MP3 is fully responsive and works on all devices including iPhones, Android phones, tablets, and computers.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Which platforms are supported?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We support YouTube, TikTok, Instagram, Facebook, SoundCloud, Twitter/X, and many more. Just paste any video URL!",
+          },
+        },
+      ],
+    })}
+  />
 </Layout>

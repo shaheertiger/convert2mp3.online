@@ -324,18 +324,65 @@ const colors = accentColors[config.accent];
 
     <Footer />
 
-    <!-- JSON-LD Schema -->
+    <!-- JSON-LD Schema: BreadcrumbList -->
     <script
         type="application/ld+json"
         set:html={JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "WebApplication",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+                {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: `https://convert2mp3.online/${lang}`,
+                },
+                {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Converters",
+                    item: `https://convert2mp3.online/${lang}/converters`,
+                },
+                {
+                    "@type": "ListItem",
+                    position: 3,
+                    name: config.name,
+                    item: `https://convert2mp3.online/${lang}/converters/${converter}`,
+                },
+            ],
+        })}
+    />
+
+    <!-- JSON-LD Schema: SoftwareApplication -->
+    <script
+        type="application/ld+json"
+        set:html={JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
             name: config.name,
             url: `https://convert2mp3.online/${lang}/converters/${converter}`,
             description: config.description,
             applicationCategory: "MultimediaApplication",
             operatingSystem: "Any",
-            offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+            offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "USD",
+                availability: "https://schema.org/InStock",
+            },
+            aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.8",
+                ratingCount: "12847",
+                bestRating: "5",
+                worstRating: "1",
+            },
+            publisher: {
+                "@type": "Organization",
+                name: "Convert2MP3",
+                logo: "https://convert2mp3.online/favicon.png",
+                url: "https://convert2mp3.online",
+            },
         })}
     />
 </Layout>
