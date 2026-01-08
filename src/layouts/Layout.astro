@@ -1,94 +1,212 @@
 ---
-import '../styles/global.css';
-import Analytics from '@vercel/analytics/astro';
+import "../styles/global.css";
+import Analytics from "@vercel/analytics/astro";
 
 interface Props {
-	title: string;
-	description?: string;
+    title: string;
+    description?: string;
 }
 
-const { title, description = "Convert online videos to MP3 instantly. Fast, free, and no registration required. The best YouTube to MP3 converter." } = Astro.props;
+const {
+    title,
+    description = "Convert online videos to MP3 instantly. Fast, free, and no registration required. The best YouTube to MP3 converter.",
+} = Astro.props;
 
-import { getLangFromUrl } from '../i18n/translations';
+import { getLangFromUrl } from "../i18n/translations";
 const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
 <html lang={lang} class="scroll-smooth">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+
+        <!-- Favicons & Icons -->
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
         <link rel="manifest" href="/manifest.json" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<meta name="description" content={description} />
-		<Analytics />
-        
+
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <Analytics />
+
         <!-- Canonical URL -->
         <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
 
         <!-- Hreflang for International SEO -->
-        <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />
-        <link rel="alternate" hreflang="en" href={new URL('/', Astro.site)} />
-        <link rel="alternate" hreflang="es" href={new URL('/es/', Astro.site)} />
-        <link rel="alternate" hreflang="de" href={new URL('/de/', Astro.site)} />
-        <link rel="alternate" hreflang="fr" href={new URL('/fr/', Astro.site)} />
-        <link rel="alternate" hreflang="pt" href={new URL('/pt/', Astro.site)} />
-        <link rel="alternate" hreflang="ja" href={new URL('/ja/', Astro.site)} />
-        <link rel="alternate" hreflang="ko" href={new URL('/ko/', Astro.site)} />
-        <link rel="alternate" hreflang="ar" href={new URL('/ar/', Astro.site)} />
-        <link rel="alternate" hreflang="it" href={new URL('/it/', Astro.site)} />
-        <link rel="alternate" hreflang="nl" href={new URL('/nl/', Astro.site)} />
-        <link rel="alternate" hreflang="pl" href={new URL('/pl/', Astro.site)} />
-        <link rel="alternate" hreflang="ru" href={new URL('/ru/', Astro.site)} />
-        <link rel="alternate" hreflang="uk" href={new URL('/ua/', Astro.site)} />
-        <link rel="alternate" hreflang="ro" href={new URL('/ro/', Astro.site)} />
-        <link rel="alternate" hreflang="hu" href={new URL('/hu/', Astro.site)} />
-        <link rel="alternate" hreflang="el" href={new URL('/el/', Astro.site)} />
-        <link rel="alternate" hreflang="cs" href={new URL('/cz/', Astro.site)} />
-        <link rel="alternate" hreflang="tr" href={new URL('/tr/', Astro.site)} />
-        <link rel="alternate" hreflang="id" href={new URL('/id/', Astro.site)} />
-        <link rel="alternate" hreflang="fil" href={new URL('/ph/', Astro.site)} />
-        <link rel="alternate" hreflang="th" href={new URL('/th/', Astro.site)} />
-        <link rel="alternate" hreflang="vi" href={new URL('/vi/', Astro.site)} />
-        <link rel="alternate" hreflang="zh-Hant" href={new URL('/cn/', Astro.site)} />
+        <link
+            rel="alternate"
+            hreflang="x-default"
+            href={new URL("/", Astro.site)}
+        />
+        <link rel="alternate" hreflang="en" href={new URL("/", Astro.site)} />
+        <link
+            rel="alternate"
+            hreflang="es"
+            href={new URL("/es/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="de"
+            href={new URL("/de/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="fr"
+            href={new URL("/fr/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="pt"
+            href={new URL("/pt/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="ja"
+            href={new URL("/ja/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="ko"
+            href={new URL("/ko/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="ar"
+            href={new URL("/ar/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="it"
+            href={new URL("/it/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="nl"
+            href={new URL("/nl/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="pl"
+            href={new URL("/pl/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="ru"
+            href={new URL("/ru/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="uk"
+            href={new URL("/ua/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="ro"
+            href={new URL("/ro/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="hu"
+            href={new URL("/hu/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="el"
+            href={new URL("/el/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="cs"
+            href={new URL("/cz/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="tr"
+            href={new URL("/tr/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="id"
+            href={new URL("/id/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="fil"
+            href={new URL("/ph/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="th"
+            href={new URL("/th/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="vi"
+            href={new URL("/vi/", Astro.site)}
+        />
+        <link
+            rel="alternate"
+            hreflang="zh-Hant"
+            href={new URL("/cn/", Astro.site)}
+        />
 
         <!-- Open Graph -->
         <meta property="og:type" content="website" />
         <meta property="og:url" content={Astro.url} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={new URL('/og-image.jpg', Astro.url)} />
+        <meta
+            property="og:image"
+            content={new URL("/og-image.jpg", Astro.url)}
+        />
+        <meta property="og:site_name" content="Convert2MP3" />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={Astro.url} />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content={new URL('/og-image.jpg', Astro.url)} />
+        <meta
+            property="twitter:image"
+            content={new URL("/og-image.jpg", Astro.url)}
+        />
 
         <!-- 2026 AI Readiness & Schema -->
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        
-        <script type="application/ld+json" set:html={JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebApplication",
-            "name": "Convert2MP3",
-            "url": "https://convert2mp3.online",
-            "description": "The ultimate online video converter tool. Convert YouTube to MP3/MP4 safely and quickly.",
-            "applicationCategory": "MultimediaApplication",
-            "operatingSystem": "Any",
-            "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD"
-            },
-            "featureList": "Video to MP3, Video to MP4, Playlist Downloading",
-            "screenshot": "https://convert2mp3.online/screenshot.jpg"
-        })} />
-	</head>
-	<body class="bg-brand-dark text-white min-h-screen flex flex-col font-body antialiased selection:bg-brand-red selection:text-white overflow-x-hidden">
-		<slot />
-	</body>
+        <meta
+            name="robots"
+            content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+
+        <script
+            type="application/ld+json"
+            set:html={JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                name: "Convert2MP3",
+                url: "https://convert2mp3.online",
+                logo: "https://convert2mp3.online/favicon.png",
+                image: "https://convert2mp3.online/og-image.jpg",
+                description:
+                    "The ultimate online video converter tool. Convert YouTube to MP3/MP4 safely and quickly.",
+                applicationCategory: "MultimediaApplication",
+                operatingSystem: "Any",
+                offers: {
+                    "@type": "Offer",
+                    price: "0",
+                    priceCurrency: "USD",
+                },
+                featureList: "Video to MP3, Video to MP4, Playlist Downloading",
+                screenshot: "https://convert2mp3.online/screenshot.jpg",
+            })}
+        />
+    </head>
+    <body
+        class="bg-brand-dark text-white min-h-screen flex flex-col font-body antialiased selection:bg-brand-red selection:text-white overflow-x-hidden"
+    >
+        <slot />
+    </body>
 </html>
