@@ -25,6 +25,7 @@ const t = useTranslations(lang);
 <Layout title={`${t("hero.title")} ${t("hero.title.highlight")} - Convert2MP3`}>
   <Header />
 
+  <!-- Hero Section -->
   <main
     class="flex-grow pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
   >
@@ -166,7 +167,7 @@ const t = useTranslations(lang);
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="1.5"
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                   ></path></svg
                 >
                 <h3 class="text-white font-bold mb-2">Safe & Secure</h3>
@@ -217,175 +218,588 @@ const t = useTranslations(lang);
     </div>
   </section>
 
-  <!-- Expanded SEO Content (Features) -->
-  <section
-    id="features"
-    class="py-24 bg-brand-dark relative z-10 border-t border-white/5"
-  >
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 prose prose-invert prose-lg">
-      <!-- Supported Platforms Section -->
-      <div class="mb-16">
-        <h2 class="text-3xl font-bold text-white mb-6 text-center">
+  <!-- Supported Platforms Section -->
+  <section class="py-20 bg-brand-dark relative z-10 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-white mb-4">
           {t("features.title")}
         </h2>
+        <p class="text-white/50 max-w-2xl mx-auto">
+          Convert videos from all major platforms. No software installation
+          required.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
         <div
-          class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center not-prose"
+          class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors text-center group"
         >
           <div
-            class="bg-white/5 p-4 rounded-lg hover:bg-white/10 transition-colors"
+            class="w-12 h-12 mx-auto mb-3 bg-red-500/10 rounded-xl flex items-center justify-center group-hover:bg-red-500/20 transition-colors"
           >
-            <span class="block font-bold text-white">YouTube</span>
-            <span class="text-xs text-white/50">Videos & Shorts</span>
+            <svg
+              class="w-6 h-6 text-red-500"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+              ></path></svg
+            >
           </div>
+          <span class="font-bold text-white block">YouTube</span>
+          <span class="text-xs text-white/40">Videos & Shorts</span>
+        </div>
+        <div
+          class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors text-center group"
+        >
           <div
-            class="bg-white/5 p-4 rounded-lg hover:bg-white/10 transition-colors"
+            class="w-12 h-12 mx-auto mb-3 bg-pink-500/10 rounded-xl flex items-center justify-center group-hover:bg-pink-500/20 transition-colors"
           >
-            <span class="block font-bold text-white">TikTok</span>
-            <span class="text-xs text-white/50">No Watermark</span>
+            <svg
+              class="w-6 h-6 text-pink-500"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+              ></path></svg
+            >
           </div>
+          <span class="font-bold text-white block">TikTok</span>
+          <span class="text-xs text-white/40">No Watermark</span>
+        </div>
+        <div
+          class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors text-center group"
+        >
           <div
-            class="bg-white/5 p-4 rounded-lg hover:bg-white/10 transition-colors"
+            class="w-12 h-12 mx-auto mb-3 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl flex items-center justify-center group-hover:from-purple-500/20 group-hover:to-pink-500/20 transition-colors"
           >
-            <span class="block font-bold text-white">Instagram</span>
-            <span class="text-xs text-white/50">Reels & IGTV</span>
+            <svg
+              class="w-6 h-6 text-pink-400"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+              ></path></svg
+            >
           </div>
+          <span class="font-bold text-white block">Instagram</span>
+          <span class="text-xs text-white/40">Reels & IGTV</span>
+        </div>
+        <div
+          class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors text-center group"
+        >
           <div
-            class="bg-white/5 p-4 rounded-lg hover:bg-white/10 transition-colors"
+            class="w-12 h-12 mx-auto mb-3 bg-blue-500/10 rounded-xl flex items-center justify-center group-hover:bg-blue-500/20 transition-colors"
           >
-            <span class="block font-bold text-white">Facebook</span>
-            <span class="text-xs text-white/50">Videos</span>
+            <svg
+              class="w-6 h-6 text-blue-500"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+              ></path></svg
+            >
+          </div>
+          <span class="font-bold text-white block">Facebook</span>
+          <span class="text-xs text-white/40">Videos & Reels</span>
+        </div>
+        <div
+          class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors text-center group"
+        >
+          <div
+            class="w-12 h-12 mx-auto mb-3 bg-orange-500/10 rounded-xl flex items-center justify-center group-hover:bg-orange-500/20 transition-colors"
+          >
+            <svg
+              class="w-6 h-6 text-orange-500"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.102-.007-.008.022h.283l-.13-.002c.146-.003.346-.011.533-.026.386-.025.71-.081.71-.081l-.29 2.711s-.324-.06-.71-.086c-.187-.013-.387-.02-.533-.024l.127-.002h-.283l.008.021-.102-.007.233 2.154c.007.052.05.097.101.097h1.859c.051 0 .094-.045.101-.097l.234-2.154-.102.006.009-.02h-.284l.13.001c-.146.003-.347.011-.534.026-.386.024-.71.081-.71.081l.29-2.711s.325.06.71.086c.188.013.388.02.534.024l-.127.002h.283l-.008-.022.102.007-.234-2.154c-.007-.054-.05-.1-.101-.1h-1.859zm4.326 0c-.051 0-.094.046-.101.1l-.234 2.154.102-.007-.008.022h.283l-.13-.002c.147-.003.347-.011.534-.026.386-.025.71-.081.71-.081l-.29 2.711s-.324-.06-.71-.086c-.188-.013-.388-.02-.534-.024l.127-.002h-.283l.008.021-.102-.007.234 2.154c.007.052.05.097.101.097h1.859c.051 0 .094-.045.101-.097l.234-2.154-.103.006.009-.02h-.283l.13.001c-.147.003-.347.011-.534.026-.386.024-.71.081-.71.081l.29-2.711s.324.06.71.086c.187.013.387.02.534.024l-.128.002h.284l-.009-.022.103.007-.234-2.154c-.007-.054-.05-.1-.101-.1h-1.86zm7.71 0c-.994 0-1.8.806-1.8 1.8v4.4c0 .994.806 1.8 1.8 1.8h5.32c.994 0 1.8-.806 1.8-1.8v-4.4c0-.994-.806-1.8-1.8-1.8h-5.32zm.35 1.2h4.62c.331 0 .6.269.6.6v3.6c0 .331-.269.6-.6.6h-4.62c-.331 0-.6-.269-.6-.6v-3.6c0-.331.269-.6.6-.6z"
+              ></path></svg
+            >
+          </div>
+          <span class="font-bold text-white block">SoundCloud</span>
+          <span class="text-xs text-white/40">Tracks & Sets</span>
+        </div>
+        <div
+          class="bg-white/5 p-6 rounded-xl hover:bg-white/10 transition-colors text-center group"
+        >
+          <div
+            class="w-12 h-12 mx-auto mb-3 bg-cyan-500/10 rounded-xl flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors"
+          >
+            <svg
+              class="w-6 h-6 text-cyan-500"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.654-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.94z"
+              ></path></svg
+            >
+          </div>
+          <span class="font-bold text-white block">Telegram</span>
+          <span class="text-xs text-white/40">Public Videos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Specs Section -->
+  <section class="py-20 bg-zinc-900/50 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-white mb-4">
+          Premium Quality Output
+        </h2>
+        <p class="text-white/50 max-w-2xl mx-auto">
+          Choose your preferred format and quality. We support the highest
+          bitrates available.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Audio -->
+        <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
+          <div class="flex items-center gap-4 mb-6">
+            <div
+              class="w-14 h-14 bg-brand-red/10 rounded-xl flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-7 h-7 text-brand-red"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+                ></path></svg
+              >
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-white">Audio (MP3)</h3>
+              <p class="text-white/50 text-sm">
+                High-fidelity audio extraction
+              </p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div
+              class="flex justify-between items-center p-4 bg-white/5 rounded-xl"
+            >
+              <div>
+                <span class="font-bold text-white">320 kbps</span>
+                <span
+                  class="text-xs text-brand-red ml-2 bg-brand-red/10 px-2 py-0.5 rounded"
+                  >BEST</span
+                >
+              </div>
+              <span class="text-white/40 text-sm">CD Quality</span>
+            </div>
+            <div
+              class="flex justify-between items-center p-4 bg-white/5 rounded-xl"
+            >
+              <span class="font-bold text-white">256 kbps</span>
+              <span class="text-white/40 text-sm">High Quality</span>
+            </div>
+            <div
+              class="flex justify-between items-center p-4 bg-white/5 rounded-xl"
+            >
+              <span class="font-bold text-white">192 kbps</span>
+              <span class="text-white/40 text-sm">Standard</span>
+            </div>
+            <div
+              class="flex justify-between items-center p-4 bg-white/5 rounded-xl"
+            >
+              <span class="font-bold text-white">128 kbps</span>
+              <span class="text-white/40 text-sm">Compact</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video -->
+        <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
+          <div class="flex items-center gap-4 mb-6">
+            <div
+              class="w-14 h-14 bg-brand-red/10 rounded-xl flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-7 h-7 text-brand-red"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                ></path></svg
+              >
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-white">Video (MP4)</h3>
+              <p class="text-white/50 text-sm">Crystal-clear video downloads</p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div
+              class="flex justify-between items-center p-4 bg-white/5 rounded-xl"
+            >
+              <div>
+                <span class="font-bold text-white">4K Ultra HD</span>
+                <span
+                  class="text-xs text-brand-red ml-2 bg-brand-red/10 px-2 py-0.5 rounded"
+                  >BEST</span
+                >
+              </div>
+              <span class="text-white/40 text-sm">2160p</span>
+            </div>
+            <div
+              class="flex justify-between items-center p-4 bg-white/5 rounded-xl"
+            >
+              <span class="font-bold text-white">Full HD</span>
+              <span class="text-white/40 text-sm">1080p</span>
+            </div>
+            <div
+              class="flex justify-between items-center p-4 bg-white/5 rounded-xl"
+            >
+              <span class="font-bold text-white">HD Ready</span>
+              <span class="text-white/40 text-sm">720p</span>
+            </div>
+            <div
+              class="flex justify-between items-center p-4 bg-white/5 rounded-xl"
+            >
+              <span class="font-bold text-white">Standard</span>
+              <span class="text-white/40 text-sm">480p</span>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Technical Details -->
-      <div class="grid md:grid-cols-2 gap-12 mb-16 not-prose">
-        <div>
-          <h3 class="text-2xl font-bold text-white mb-4">MP3 & Audio</h3>
-          <p class="text-white/60 mb-4">
-            {t("features.hd.desc")}
-          </p>
-          <ul class="space-y-2 text-white/60 text-sm">
-            <li class="flex items-center gap-2">
-              <div class="w-1.5 h-1.5 bg-brand-red rounded-full"></div>
-              <strong>320 kbps</strong> (CD Quality)
-            </li>
-            <li class="flex items-center gap-2">
-              <div class="w-1.5 h-1.5 bg-brand-red rounded-full"></div> 256 kbps (High
-              Quality)
-            </li>
-            <li class="flex items-center gap-2">
-              <div class="w-1.5 h-1.5 bg-brand-red rounded-full"></div> 192 kbps (Standard)
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="text-2xl font-bold text-white mb-4">MP4 & Video</h3>
-          <p class="text-white/60 mb-4">
-            Download videos in the highest possible resolution for offline
-            viewing.
-          </p>
-          <ul class="space-y-2 text-white/60 text-sm">
-            <li class="flex items-center gap-2">
-              <div class="w-1.5 h-1.5 bg-brand-red rounded-full"></div>
-              <strong>4K Ultra HD</strong> (2160p)
-            </li>
-            <li class="flex items-center gap-2">
-              <div class="w-1.5 h-1.5 bg-brand-red rounded-full"></div> Full HD (1080p)
-            </li>
-            <li class="flex items-center gap-2">
-              <div class="w-1.5 h-1.5 bg-brand-red rounded-full"></div> HD Ready (720p)
-            </li>
-          </ul>
-        </div>
+  <!-- Comparison Table -->
+  <section class="py-20 bg-brand-dark relative z-10 border-t border-white/5">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-white mb-4">
+          Why Choose Convert2MP3 Online?
+        </h2>
+        <p class="text-white/50 max-w-2xl mx-auto">
+          See how we compare to desktop software and other online converters.
+        </p>
       </div>
 
-      <!-- Features Grid -->
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 not-prose"
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-white/10">
+              <th class="p-4 text-white/60 font-medium">Feature</th>
+              <th class="p-4 text-brand-red font-bold">Convert2MP3</th>
+              <th class="p-4 text-white/40 font-medium">Desktop Apps</th>
+              <th class="p-4 text-white/40 font-medium">Other Sites</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm">
+            <tr class="border-b border-white/5">
+              <td class="p-4 text-white/70">No Installation</td>
+              <td class="p-4 text-green-400">✓ Yes</td>
+              <td class="p-4 text-red-400">✗ Requires Install</td>
+              <td class="p-4 text-green-400">✓ Yes</td>
+            </tr>
+            <tr class="border-b border-white/5">
+              <td class="p-4 text-white/70">320kbps MP3</td>
+              <td class="p-4 text-green-400">✓ Yes</td>
+              <td class="p-4 text-green-400">✓ Yes</td>
+              <td class="p-4 text-yellow-400">~ Sometimes</td>
+            </tr>
+            <tr class="border-b border-white/5">
+              <td class="p-4 text-white/70">4K Video</td>
+              <td class="p-4 text-green-400">✓ Yes</td>
+              <td class="p-4 text-green-400">✓ Yes</td>
+              <td class="p-4 text-red-400">✗ Rarely</td>
+            </tr>
+            <tr class="border-b border-white/5">
+              <td class="p-4 text-white/70">No Pop-up Ads</td>
+              <td class="p-4 text-green-400">✓ Yes</td>
+              <td class="p-4 text-yellow-400">~ Varies</td>
+              <td class="p-4 text-red-400">✗ Often Full of Ads</td>
+            </tr>
+            <tr class="border-b border-white/5">
+              <td class="p-4 text-white/70">Works on Mobile</td>
+              <td class="p-4 text-green-400">✓ Yes</td>
+              <td class="p-4 text-red-400">✗ Desktop Only</td>
+              <td class="p-4 text-yellow-400">~ Sometimes</td>
+            </tr>
+            <tr class="border-b border-white/5">
+              <td class="p-4 text-white/70">Safe & Secure</td>
+              <td class="p-4 text-green-400">✓ SSL Encrypted</td>
+              <td class="p-4 text-yellow-400">~ Risk of Malware</td>
+              <td class="p-4 text-red-400">✗ Often Unsafe</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security Section -->
+  <section class="py-20 bg-zinc-900/50 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-white mb-6">
+            Your Security is Our Priority
+          </h2>
+          <p class="text-white/60 mb-8 leading-relaxed">
+            We understand the importance of online safety. Unlike other
+            converters filled with malware and aggressive pop-ups, Convert2MP3
+            is built with security-first principles.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-4">
+              <div
+                class="w-8 h-8 bg-green-500/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
+              >
+                <svg
+                  class="w-4 h-4 text-green-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  ><path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path></svg
+                >
+              </div>
+              <div>
+                <h4 class="text-white font-semibold">SSL Encryption</h4>
+                <p class="text-white/50 text-sm">
+                  All data is transmitted securely via HTTPS.
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div
+                class="w-8 h-8 bg-green-500/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
+              >
+                <svg
+                  class="w-4 h-4 text-green-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  ><path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path></svg
+                >
+              </div>
+              <div>
+                <h4 class="text-white font-semibold">
+                  No Personal Data Collection
+                </h4>
+                <p class="text-white/50 text-sm">
+                  We don't track you or sell your information.
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div
+                class="w-8 h-8 bg-green-500/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
+              >
+                <svg
+                  class="w-4 h-4 text-green-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  ><path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path></svg
+                >
+              </div>
+              <div>
+                <h4 class="text-white font-semibold">
+                  Files Automatically Deleted
+                </h4>
+                <p class="text-white/50 text-sm">
+                  Converted files are removed from our servers within hours.
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div
+                class="w-8 h-8 bg-green-500/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
+              >
+                <svg
+                  class="w-4 h-4 text-green-400"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  ><path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"></path></svg
+                >
+              </div>
+              <div>
+                <h4 class="text-white font-semibold">No Software Downloads</h4>
+                <p class="text-white/50 text-sm">
+                  Everything runs in your browser. Zero risk of viruses.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
+          <div class="text-center">
+            <div
+              class="w-20 h-20 mx-auto mb-6 bg-brand-red/10 rounded-full flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-10 h-10 text-brand-red"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                ></path></svg
+              >
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">100% Secure</h3>
+            <p class="text-white/50 mb-6">
+              Trusted by millions of users worldwide
+            </p>
+            <div class="grid grid-cols-3 gap-4 text-center">
+              <div>
+                <div class="text-2xl font-bold text-white">10M+</div>
+                <div class="text-xs text-white/40">Downloads</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-white">190+</div>
+                <div class="text-xs text-white/40">Countries</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-white">0</div>
+                <div class="text-xs text-white/40">Viruses</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section
+    id="faq"
+    class="py-20 bg-brand-dark relative z-10 border-t border-white/5"
+  >
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-white mb-4">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-white/50">
+          Everything you need to know about Convert2MP3
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="space-y-6">
+          <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+            <h3 class="text-lg font-bold text-white mb-2">
+              Is Convert2MP3 free to use?
+            </h3>
+            <p class="text-white/60 text-sm">
+              Yes! Convert2MP3 is 100% free. There are no hidden fees,
+              subscriptions, or paywalls. We believe everyone should have access
+              to offline media.
+            </p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+            <h3 class="text-lg font-bold text-white mb-2">
+              What quality can I download?
+            </h3>
+            <p class="text-white/60 text-sm">
+              We support up to 320kbps for MP3 audio (CD quality) and 4K Ultra
+              HD for video. Select your preferred quality before downloading.
+            </p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+            <h3 class="text-lg font-bold text-white mb-2">
+              Do I need to install anything?
+            </h3>
+            <p class="text-white/60 text-sm">
+              No! Convert2MP3 works entirely in your browser. No downloads, no
+              installations, no plugins. Just paste a link and go.
+            </p>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+            <h3 class="text-lg font-bold text-white mb-2">
+              Is it safe to use?
+            </h3>
+            <p class="text-white/60 text-sm">
+              Absolutely. We use SSL encryption, don't store personal data, and
+              never require you to install suspicious software. Your files are
+              deleted from our servers automatically.
+            </p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+            <h3 class="text-lg font-bold text-white mb-2">
+              Does it work on iPhone/Android?
+            </h3>
+            <p class="text-white/60 text-sm">
+              Yes! Convert2MP3 is fully responsive and works on all devices
+              including iPhones, Android phones, tablets, and computers.
+            </p>
+          </div>
+          <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+            <h3 class="text-lg font-bold text-white mb-2">
+              Which platforms are supported?
+            </h3>
+            <p class="text-white/60 text-sm">
+              We support YouTube, TikTok, Instagram, Facebook, SoundCloud,
+              Twitter/X, and many more. Just paste any video URL!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section
+    class="py-20 bg-gradient-to-b from-brand-dark to-zinc-900 relative z-10"
+  >
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-white mb-6">
+        Ready to Start Converting?
+      </h2>
+      <p class="text-xl text-white/60 mb-8 max-w-2xl mx-auto">
+        Join millions of users who trust Convert2MP3 for their video and audio
+        downloads. No signup required.
+      </p>
+      <a
+        href="#"
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+        class="inline-block bg-brand-red hover:bg-brand-red/90 text-white px-8 py-4 rounded-xl font-bold uppercase tracking-wide shadow-lg shadow-brand-red/20 transition-all hover:-translate-y-1"
       >
-        <div
-          class="group bg-white/5 border border-white/5 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1"
-        >
-          <div
-            class="w-12 h-12 bg-brand-red/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-red/20 transition-colors"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6 text-brand-red"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
-              ></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">
-            {t("features.fast.title")}
-          </h3>
-          <p class="text-white/60 leading-relaxed">{t("features.fast.desc")}</p>
-        </div>
-
-        <div
-          class="group bg-white/5 border border-white/5 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1"
-        >
-          <div
-            class="w-12 h-12 bg-brand-red/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-red/20 transition-colors"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6 text-brand-red"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M9 12.75L11.25 15 15 9.75M21 12c0 5.523-4.477 10-10 10S1 17.523 1 12 5.477 2 11 2s10 4.477 10 10z"
-              ></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">
-            {t("features.easy.title")}
-          </h3>
-          <p class="text-white/60 leading-relaxed">{t("features.easy.desc")}</p>
-        </div>
-
-        <div
-          class="group bg-white/5 border border-white/5 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1"
-        >
-          <div
-            class="w-12 h-12 bg-brand-red/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-red/20 transition-colors"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6 text-brand-red"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
-              ></path>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">
-            {t("features.free.title")}
-          </h3>
-          <p class="text-white/60 leading-relaxed">{t("features.free.desc")}</p>
-        </div>
-      </div>
+        Convert Now — It's Free
+      </a>
     </div>
   </section>
 
