@@ -1,0 +1,341 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import ConverterWidget from "../../../components/ConverterWidget.tsx";
+import {
+    languages,
+    useTranslations,
+    type Language,
+} from "../../../i18n/translations";
+
+// Converter configuration with platform-specific styling
+const converters: Record<
+    string,
+    {
+        name: string;
+        gradient: string;
+        accent: string;
+        icon: string;
+        platform: string;
+        description: string;
+    }
+> = {
+    "spotify-to-mp3": {
+        name: "Spotify to MP3",
+        gradient: "from-green-900/30 via-slate-900 to-slate-950",
+        accent: "green",
+        icon: "🎵",
+        platform: "Spotify",
+        description:
+            "Convert Spotify tracks, albums, and playlists to high-quality MP3 files. Free online Spotify to MP3 converter.",
+    },
+    "facebook-to-mp3": {
+        name: "Facebook to MP3",
+        gradient: "from-blue-900/30 via-slate-900 to-slate-950",
+        accent: "blue",
+        icon: "📘",
+        platform: "Facebook",
+        description:
+            "Download Facebook videos as MP3 audio files. Convert Facebook Reels and videos to MP3 for free.",
+    },
+    "soundcloud-to-mp3": {
+        name: "SoundCloud to MP3",
+        gradient: "from-orange-900/30 via-slate-900 to-slate-950",
+        accent: "orange",
+        icon: "🔊",
+        platform: "SoundCloud",
+        description:
+            "Convert SoundCloud tracks and playlists to MP3. Free online SoundCloud downloader and converter.",
+    },
+    "mp4-to-mp3": {
+        name: "MP4 to MP3",
+        gradient: "from-rose-900/30 via-slate-900 to-slate-950",
+        accent: "rose",
+        icon: "🎬",
+        platform: "MP4",
+        description:
+            "Extract audio from MP4 video files. Convert any MP4 video to high-quality MP3 audio.",
+    },
+    "video-to-mp3": {
+        name: "Video to MP3",
+        gradient: "from-violet-900/30 via-slate-900 to-slate-950",
+        accent: "violet",
+        icon: "📹",
+        platform: "Video",
+        description:
+            "Convert any video format to MP3 audio. Universal video to audio converter - free and online.",
+    },
+    "youtube-to-mp3-320kbps": {
+        name: "YouTube to MP3 320kbps",
+        gradient: "from-amber-900/30 via-slate-900 to-slate-950",
+        accent: "amber",
+        icon: "🎧",
+        platform: "YouTube",
+        description:
+            "Download YouTube videos as high-quality 320kbps MP3 files. Best quality YouTube to MP3 converter.",
+    },
+    "free-youtube-to-mp3": {
+        name: "Free YouTube to MP3",
+        gradient: "from-emerald-900/30 via-slate-900 to-slate-950",
+        accent: "emerald",
+        icon: "💚",
+        platform: "YouTube",
+        description:
+            "Free YouTube to MP3 converter. No ads, no registration, no limits. Convert YouTube videos to MP3 instantly.",
+    },
+};
+
+export function getStaticPaths() {
+    const paths: { params: { lang: string; converter: string } }[] = [];
+    // Inline array to avoid module scope issues
+    const converterSlugs = [
+        "spotify-to-mp3",
+        "facebook-to-mp3",
+        "soundcloud-to-mp3",
+        "mp4-to-mp3",
+        "video-to-mp3",
+        "youtube-to-mp3-320kbps",
+        "free-youtube-to-mp3",
+    ];
+    const langs = [
+        "es",
+        "de",
+        "fr",
+        "pt",
+        "ja",
+        "ko",
+        "ar",
+        "it",
+        "nl",
+        "pl",
+        "ru",
+        "ua",
+        "ro",
+        "hu",
+        "el",
+        "cz",
+        "tr",
+        "id",
+        "ph",
+        "th",
+        "vi",
+        "cn",
+    ];
+
+    for (const lang of langs) {
+        for (const converter of converterSlugs) {
+            paths.push({ params: { lang, converter } });
+        }
+    }
+    return paths;
+}
+
+const { lang, converter } = Astro.params as {
+    lang: Language;
+    converter: string;
+};
+const t = useTranslations(lang);
+const config = converters[converter];
+
+const accentColors: Record<
+    string,
+    { text: string; bg: string; border: string }
+> = {
+    green: {
+        text: "text-green-400",
+        bg: "bg-green-600",
+        border: "border-green-500/20",
+    },
+    blue: {
+        text: "text-blue-400",
+        bg: "bg-blue-600",
+        border: "border-blue-500/20",
+    },
+    orange: {
+        text: "text-orange-400",
+        bg: "bg-orange-600",
+        border: "border-orange-500/20",
+    },
+    rose: {
+        text: "text-rose-400",
+        bg: "bg-rose-600",
+        border: "border-rose-500/20",
+    },
+    violet: {
+        text: "text-violet-400",
+        bg: "bg-violet-600",
+        border: "border-violet-500/20",
+    },
+    amber: {
+        text: "text-amber-400",
+        bg: "bg-amber-600",
+        border: "border-amber-500/20",
+    },
+    emerald: {
+        text: "text-emerald-400",
+        bg: "bg-emerald-600",
+        border: "border-emerald-500/20",
+    },
+};
+
+const colors = accentColors[config.accent];
+---
+
+<Layout title={`${config.name} - Convert2MP3`} description={config.description}>
+    <Header />
+
+    <main class="bg-slate-900 text-slate-200 min-h-screen overflow-hidden">
+        <!-- HERO -->
+        <section
+            class={`pt-32 pb-20 px-4 text-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] ${config.gradient}`}
+        >
+            <div class="max-w-4xl mx-auto">
+                <span
+                    class={`${colors.text} font-bold uppercase tracking-widest text-sm mb-4 block`}
+                    >{config.platform} Downloader</span
+                >
+                <h1
+                    class={`text-4xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r ${colors.text.replace("text-", "from-")} to-white mb-6 drop-shadow-sm tracking-tight`}
+                >
+                    {config.name}
+                </h1>
+                <p
+                    class="text-lg sm:text-xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed font-light"
+                >
+                    {config.description}
+                </p>
+
+                <div class="mb-10 relative z-10">
+                    <ConverterWidget client:load lang={lang} />
+                </div>
+
+                <p class="text-sm text-slate-500 max-w-lg mx-auto">
+                    {t("hero.terms")}
+                    <a
+                        href="/terms"
+                        class="text-white/50 hover:text-white underline"
+                        >{t("hero.terms.link")}</a
+                    >
+                </p>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section class="py-20 px-4 bg-slate-950/50 border-y border-white/5">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl font-bold text-white text-center mb-12">
+                    {t("features.title")}
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div
+                        class="p-8 bg-slate-800/30 rounded-2xl border border-white/5"
+                    >
+                        <div class="text-5xl mb-4">🎵</div>
+                        <h3 class="text-xl font-bold text-white mb-2">
+                            {t("features.hd.title")}
+                        </h3>
+                        <p class="text-slate-400 text-sm">
+                            {t("features.hd.desc")}
+                        </p>
+                    </div>
+                    <div
+                        class="p-8 bg-slate-800/30 rounded-2xl border border-white/5"
+                    >
+                        <div class="text-5xl mb-4">📱</div>
+                        <h3 class="text-xl font-bold text-white mb-2">
+                            {t("features.devices.title")}
+                        </h3>
+                        <p class="text-slate-400 text-sm">
+                            {t("features.devices.desc")}
+                        </p>
+                    </div>
+                    <div
+                        class="p-8 bg-slate-800/30 rounded-2xl border border-white/5"
+                    >
+                        <div class="text-5xl mb-4">💰</div>
+                        <h3 class="text-xl font-bold text-white mb-2">
+                            {t("features.free.title")}
+                        </h3>
+                        <p class="text-slate-400 text-sm">
+                            {t("features.free.desc")}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="py-20 px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-white mb-8">
+                    {t("howto.title")}
+                </h2>
+                <ol class="space-y-6 text-left text-slate-400">
+                    <li class="flex gap-4 items-start">
+                        <span
+                            class={`flex-shrink-0 w-8 h-8 rounded-full ${colors.bg} flex items-center justify-center font-bold text-white text-sm`}
+                            >1</span
+                        >
+                        <p>
+                            <strong class="text-white"
+                                >{t("howto.step1.title")}</strong
+                            > - {t("howto.step1.desc")}
+                        </p>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <span
+                            class={`flex-shrink-0 w-8 h-8 rounded-full ${colors.bg} flex items-center justify-center font-bold text-white text-sm`}
+                            >2</span
+                        >
+                        <p>
+                            <strong class="text-white"
+                                >{t("howto.step2.title")}</strong
+                            > - {t("howto.step2.desc")}
+                        </p>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <span
+                            class={`flex-shrink-0 w-8 h-8 rounded-full ${colors.bg} flex items-center justify-center font-bold text-white text-sm`}
+                            >3</span
+                        >
+                        <p>
+                            <strong class="text-white"
+                                >{t("howto.step3.title")}</strong
+                            > - {t("howto.step3.desc")}
+                        </p>
+                    </li>
+                    <li class="flex gap-4 items-start">
+                        <span
+                            class={`flex-shrink-0 w-8 h-8 rounded-full ${colors.bg} flex items-center justify-center font-bold text-white text-sm`}
+                            >4</span
+                        >
+                        <p>
+                            <strong class="text-white"
+                                >{t("howto.step4.title")}</strong
+                            > - {t("howto.step4.desc")}
+                        </p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+
+    <!-- JSON-LD Schema -->
+    <script
+        type="application/ld+json"
+        set:html={JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            name: config.name,
+            url: `https://convert2mp3.online/${lang}/converters/${converter}`,
+            description: config.description,
+            applicationCategory: "MultimediaApplication",
+            operatingSystem: "Any",
+            offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        })}
+    />
+</Layout>
