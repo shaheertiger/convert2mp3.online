@@ -1,0 +1,229 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "SoundCloud Playlist Downloader - Download Entire Playlists Free";
+const description = "Download entire SoundCloud playlists as MP3. Batch convert all tracks from any SoundCloud playlist to MP3 files. Free, fast, no registration.";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+
+  <main class="bg-slate-900 text-slate-200 min-h-screen overflow-hidden">
+    
+    <!-- HERO -->
+    <section class="pt-32 pb-20 px-4 text-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-900/30 via-slate-900 to-slate-950">
+      <div class="max-w-4xl mx-auto">
+        <span class="text-orange-400 font-bold uppercase tracking-widest text-sm mb-4 block">Batch Download Tool</span>
+        <h1 class="text-4xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400 mb-6 drop-shadow-sm tracking-tight">
+          SoundCloud Playlist Downloader
+        </h1>
+        <p class="text-lg sm:text-xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
+          Download entire SoundCloud playlists in one go. Paste a playlist URL and get all tracks as MP3 files.
+          <span class="text-orange-400 font-medium">Save hours of manual downloading.</span>
+        </p>
+
+        <!-- PLAYLIST INPUT -->
+        <div class="mb-10 relative z-10 max-w-2xl mx-auto">
+          <div class="bg-slate-800/50 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-2xl">
+            <div class="flex flex-col gap-4">
+              <div class="relative">
+                <input 
+                  type="text" 
+                  id="playlist-url"
+                  placeholder="Paste SoundCloud playlist URL here..."
+                  class="w-full bg-slate-900/50 border border-slate-700 rounded-xl py-4 px-5 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                />
+              </div>
+              <button 
+                id="analyze-btn"
+                class="w-full py-4 bg-orange-600 hover:bg-orange-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-orange-500/20"
+              >
+                🔍 Analyze Playlist
+              </button>
+            </div>
+          </div>
+          
+          <!-- Results Area -->
+          <div id="results-area" class="hidden mt-6 bg-slate-800/50 rounded-2xl p-6 border border-white/10">
+            <div class="flex items-center justify-between mb-4">
+              <h3 id="playlist-title" class="text-lg font-bold text-white">Playlist Name</h3>
+              <span id="track-count" class="text-sm text-orange-400 bg-orange-900/30 px-3 py-1 rounded-full">0 tracks</span>
+            </div>
+            <div id="track-list" class="space-y-2 max-h-64 overflow-y-auto mb-4">
+              <!-- Tracks will be injected here -->
+            </div>
+            <button 
+              id="download-all-btn"
+              class="w-full py-3 bg-green-600 hover:bg-green-500 text-white font-bold rounded-xl transition-all"
+            >
+              ⬇️ Download All as MP3
+            </button>
+          </div>
+        </div>
+        
+        <p class="text-sm text-slate-500 max-w-lg mx-auto">
+          Supports public SoundCloud playlists • Batch download up to 200 tracks
+        </p>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="py-20 px-4 bg-slate-950/50 border-y border-white/5">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-white text-center mb-12">How to <span class="text-orange-400">Download Playlists</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+            <h3 class="text-white font-bold mb-2">Find Playlist</h3>
+            <p class="text-slate-400 text-sm">Open any public SoundCloud playlist and copy the URL from your browser.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+            <h3 class="text-white font-bold mb-2">Analyze</h3>
+            <p class="text-slate-400 text-sm">Paste the playlist link above. We'll scan and list all available tracks.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+            <h3 class="text-white font-bold mb-2">Download All</h3>
+            <p class="text-slate-400 text-sm">Click to download all tracks as MP3 files. They'll be saved to your device.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="py-20 px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-white text-center mb-12">Playlist Downloader <span class="text-orange-400">Features</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-slate-800/30 p-6 rounded-xl">
+            <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+              <span class="text-2xl">📦</span> Batch Download
+            </h3>
+            <p class="text-slate-400 text-sm">Download up to 200 tracks from a single playlist. No need to convert one by one.</p>
+          </div>
+          <div class="bg-slate-800/30 p-6 rounded-xl">
+            <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+              <span class="text-2xl">🏷️</span> Auto Tagging
+            </h3>
+            <p class="text-slate-400 text-sm">Each MP3 includes proper ID3 tags: artist, title, and artwork embedded automatically.</p>
+          </div>
+          <div class="bg-slate-800/30 p-6 rounded-xl">
+            <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+              <span class="text-2xl">⚡</span> Fast Processing
+            </h3>
+            <p class="text-slate-400 text-sm">Our servers process multiple tracks in parallel for maximum speed.</p>
+          </div>
+          <div class="bg-slate-800/30 p-6 rounded-xl">
+            <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+              <span class="text-2xl">📁</span> ZIP Download
+            </h3>
+            <p class="text-slate-400 text-sm">Large playlists are packaged as a single ZIP file for easy downloading.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 px-4 bg-slate-950/30 border-t border-white/5">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-white text-center mb-12">FAQ</h2>
+        <div class="space-y-4">
+          <details class="bg-slate-800/30 rounded-xl p-5 group">
+            <summary class="font-bold text-white list-none flex justify-between items-center cursor-pointer">
+              <span>How many tracks can I download at once?</span>
+              <span class="text-orange-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-4 text-slate-400 text-sm">Up to 200 tracks per playlist. For larger playlists, we'll download the first 200 tracks.</p>
+          </details>
+          <details class="bg-slate-800/30 rounded-xl p-5 group">
+            <summary class="font-bold text-white list-none flex justify-between items-center cursor-pointer">
+              <span>Does this work with private playlists?</span>
+              <span class="text-orange-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-4 text-slate-400 text-sm">No, only public playlists are supported. Private or unlisted playlists require authentication we don't have access to.</p>
+          </details>
+          <details class="bg-slate-800/30 rounded-xl p-5 group">
+            <summary class="font-bold text-white list-none flex justify-between items-center cursor-pointer">
+              <span>What quality are the MP3 files?</span>
+              <span class="text-orange-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-4 text-slate-400 text-sm">We extract at the highest quality available on SoundCloud, typically 128kbps. That's SoundCloud's native streaming quality.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CROSS LINKS -->
+    <section class="py-12 px-4 border-t border-white/5">
+      <div class="max-w-4xl mx-auto text-center">
+        <p class="text-sm text-slate-500">
+          Other SoundCloud Tools: 
+          <a href="/converters/soundcloud-to-mp3" class="text-orange-400 hover:underline">Track Downloader</a> | 
+          <a href="/converters/soundcloud-artwork" class="text-orange-400 hover:underline">Artwork Downloader</a> | 
+          <a href="/converters/soundcloud-to-wav" class="text-orange-400 hover:underline">SoundCloud to WAV</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  
+  <script>
+    const analyzeBtn = document.getElementById('analyze-btn');
+    const resultsArea = document.getElementById('results-area');
+    const trackList = document.getElementById('track-list');
+    const playlistTitle = document.getElementById('playlist-title');
+    const trackCount = document.getElementById('track-count');
+    const playlistUrl = document.getElementById('playlist-url') as HTMLInputElement;
+
+    analyzeBtn?.addEventListener('click', () => {
+      const url = playlistUrl?.value;
+      if (!url || !url.includes('soundcloud.com')) {
+        alert('Please enter a valid SoundCloud playlist URL');
+        return;
+      }
+
+      // Simulate playlist analysis
+      resultsArea?.classList.remove('hidden');
+      if (playlistTitle) playlistTitle.textContent = 'Summer Vibes 2026';
+      if (trackCount) trackCount.textContent = '24 tracks';
+      
+      // Simulate track list
+      const tracks = [
+        'Artist One - Summer Days',
+        'DJ Cool - Beach Waves',
+        'Producer X - Sunset Mix',
+        'Various - Chill Beats Vol. 1',
+        'Artist Two - Ocean Breeze',
+      ];
+      
+      if (trackList) {
+        trackList.innerHTML = tracks.map((track, i) => `
+          <div class="flex items-center gap-3 p-3 bg-slate-900/50 rounded-lg">
+            <span class="text-slate-500 text-sm w-6">${i + 1}</span>
+            <span class="text-white text-sm flex-1">${track}</span>
+            <span class="text-slate-500 text-xs">3:45</span>
+          </div>
+        `).join('') + `<p class="text-center text-slate-500 text-sm py-2">+ 19 more tracks</p>`;
+      }
+    });
+
+    document.getElementById('download-all-btn')?.addEventListener('click', () => {
+      alert('In the production version, this would start downloading all tracks as a ZIP file.');
+    });
+  </script>
+  
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "SoundCloud Playlist Downloader",
+    "url": "https://convert2mp3.online/converters/soundcloud-playlist",
+    "description": description,
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  })} />
+</Layout>

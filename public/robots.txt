@@ -1,6 +1,21 @@
-# 2026 Standard Robots.txt
+# 2026 Standard Robots.txt - Optimized for Google & Bing
 
-# Allow AI Search Agents for visibility
+# ============================================
+# BING-SPECIFIC RULES (Bing reads top-to-bottom)
+# ============================================
+User-agent: bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: msnbot
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
+# ============================================
+# AI SEARCH AGENTS (2026 Standard)
+# ============================================
 User-agent: GPTBot
 Allow: /
 
@@ -10,12 +25,37 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# Block known abusive crawlers
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# ============================================
+# BLOCK ABUSIVE CRAWLERS
+# ============================================
 User-agent: Bytespider
 Disallow: /
 
-# General rules for all other bots (must be last)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# ============================================
+# GENERAL RULES (Must be last)
+# ============================================
 User-agent: *
 Allow: /
 
+# ============================================
+# SITEMAPS
+# ============================================
 Sitemap: https://convert2mp3.online/sitemap-index.xml
+
+# ============================================
+# INDEXNOW API KEY (for Bing Instant Indexing)
+# ============================================
+# IndexNow key file should be at: /[key].txt
+# See: https://www.indexnow.org/

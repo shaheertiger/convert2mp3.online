@@ -1,0 +1,13 @@
+# IndexNow Verification Key
+# 
+# This file verifies ownership for IndexNow API (Bing, Yandex, Lista)
+# 
+# To activate:
+# 1. Generate a key at https://www.indexnow.org/
+# 2. Rename this file to match your key (e.g., abc123def456.txt)
+# 3. Update your deployment to call IndexNow API when content changes
+#
+# API Endpoint: https://api.indexnow.org/indexnow
+#
+# Example cURL:
+# curl "https://api.indexnow.org/indexnow?url=https://convert2mp3.online/converters/spotify-to-mp3&key=YOUR_KEY"

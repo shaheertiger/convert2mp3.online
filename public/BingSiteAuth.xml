@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<users>
+  <!-- 
+    Bing Site Authentication File
+    
+    To verify your site with Bing Webmaster Tools:
+    1. Go to https://www.bing.com/webmasters
+    2. Add your site: convert2mp3.online
+    3. Choose "XML File" verification method
+    4. Replace this file contents with the XML provided by Bing
+    5. Deploy and click "Verify" in Bing Webmaster Tools
+    
+    Alternative: Use meta tag verification in Layout.astro
+    <meta name="msvalidate.01" content="YOUR_KEY" />
+  -->
+</users>

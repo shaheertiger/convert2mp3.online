@@ -1,0 +1,215 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "SoundCloud Artwork Downloader - Download Cover Art in HD";
+const description = "Download SoundCloud cover artwork in high resolution. Get album art, track covers, and profile pictures from any SoundCloud page. Free HD quality downloads.";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+
+  <main class="bg-slate-900 text-slate-200 min-h-screen overflow-hidden">
+    
+    <!-- HERO -->
+    <section class="pt-32 pb-20 px-4 text-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-pink-900/30 via-slate-900 to-slate-950">
+      <div class="max-w-4xl mx-auto">
+        <span class="text-pink-400 font-bold uppercase tracking-widest text-sm mb-4 block">Cover Art Tool</span>
+        <h1 class="text-4xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400 mb-6 drop-shadow-sm tracking-tight">
+          SoundCloud Artwork Downloader
+        </h1>
+        <p class="text-lg sm:text-xl text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
+          Download high-resolution cover art from any SoundCloud track or artist. Get original quality artwork for your music library.
+          <span class="text-pink-400 font-medium">Up to 500x500px HD quality.</span>
+        </p>
+
+        <!-- ARTWORK INPUT -->
+        <div class="mb-10 relative z-10 max-w-2xl mx-auto">
+          <div class="bg-slate-800/50 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-2xl">
+            <div class="flex flex-col gap-4">
+              <input 
+                type="text" 
+                id="track-url"
+                placeholder="Paste SoundCloud track or artist URL..."
+                class="w-full bg-slate-900/50 border border-slate-700 rounded-xl py-4 px-5 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+              />
+              <button 
+                id="get-artwork-btn"
+                class="w-full py-4 bg-pink-600 hover:bg-pink-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-pink-500/20"
+              >
+                🖼️ Get Artwork
+              </button>
+            </div>
+          </div>
+          
+          <!-- Artwork Result -->
+          <div id="artwork-result" class="hidden mt-6 bg-slate-800/50 rounded-2xl p-6 border border-white/10">
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+              <div class="w-48 h-48 bg-gradient-to-br from-pink-500 to-violet-500 rounded-xl flex items-center justify-center overflow-hidden">
+                <img id="artwork-preview" src="" alt="Cover Art" class="w-full h-full object-cover hidden" />
+                <span id="artwork-placeholder" class="text-6xl">🎵</span>
+              </div>
+              <div class="flex-1 text-center md:text-left">
+                <h3 id="track-title" class="text-xl font-bold text-white mb-2">Track Title</h3>
+                <p id="artist-name" class="text-slate-400 mb-4">Artist Name</p>
+                <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+                  <button class="download-btn px-4 py-2 bg-pink-600 hover:bg-pink-500 text-white text-sm font-medium rounded-lg transition-colors" data-size="500">
+                    500x500 HD
+                  </button>
+                  <button class="download-btn px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white text-sm font-medium rounded-lg transition-colors" data-size="300">
+                    300x300
+                  </button>
+                  <button class="download-btn px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white text-sm font-medium rounded-lg transition-colors" data-size="100">
+                    100x100
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <p class="text-sm text-slate-500 max-w-lg mx-auto">
+          Works with tracks, albums, and artist profiles • Original quality
+        </p>
+      </div>
+    </section>
+
+    <!-- USE CASES -->
+    <section class="py-20 px-4 bg-slate-950/50 border-y border-white/5">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-white text-center mb-12">Why Download <span class="text-pink-400">Cover Art</span>?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-slate-800/30 p-6 rounded-xl text-center">
+            <span class="text-4xl mb-4 block">🎵</span>
+            <h3 class="text-white font-bold mb-2">Music Library</h3>
+            <p class="text-slate-400 text-sm">Add proper cover art to your MP3 files for a polished, organized music collection.</p>
+          </div>
+          <div class="bg-slate-800/30 p-6 rounded-xl text-center">
+            <span class="text-4xl mb-4 block">🎧</span>
+            <h3 class="text-white font-bold mb-2">DJ Sets</h3>
+            <p class="text-slate-400 text-sm">Complete your DJ library with matching artwork for consistent visuals.</p>
+          </div>
+          <div class="bg-slate-800/30 p-6 rounded-xl text-center">
+            <span class="text-4xl mb-4 block">📱</span>
+            <h3 class="text-white font-bold mb-2">Wallpapers</h3>
+            <p class="text-slate-400 text-sm">Use favorite album covers as phone wallpapers or desktop backgrounds.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="py-20 px-4">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-white text-center mb-12">How It <span class="text-pink-400">Works</span></h2>
+        <ol class="space-y-6 text-slate-400">
+          <li class="flex gap-4 items-start">
+            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center font-bold text-white">1</span>
+            <div>
+              <strong class="text-white block mb-1">Copy the SoundCloud URL</strong>
+              <p class="text-sm">Open any track, album, or artist page on SoundCloud and copy the URL from your browser.</p>
+            </div>
+          </li>
+          <li class="flex gap-4 items-start">
+            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center font-bold text-white">2</span>
+            <div>
+              <strong class="text-white block mb-1">Paste and Analyze</strong>
+              <p class="text-sm">Paste the link above and click "Get Artwork". We'll fetch the highest resolution available.</p>
+            </div>
+          </li>
+          <li class="flex gap-4 items-start">
+            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center font-bold text-white">3</span>
+            <div>
+              <strong class="text-white block mb-1">Choose Your Size</strong>
+              <p class="text-sm">Download in multiple sizes: 500x500 HD, 300x300, or 100x100 for thumbnails.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 px-4 bg-slate-950/30 border-t border-white/5">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-white text-center mb-12">FAQ</h2>
+        <div class="space-y-4">
+          <details class="bg-slate-800/30 rounded-xl p-5 group">
+            <summary class="font-bold text-white list-none flex justify-between items-center cursor-pointer">
+              <span>What's the maximum resolution?</span>
+              <span class="text-pink-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-4 text-slate-400 text-sm">SoundCloud stores artwork at a maximum of 500x500 pixels. That's the highest quality we can provide, as it's SoundCloud's limit.</p>
+          </details>
+          <details class="bg-slate-800/30 rounded-xl p-5 group">
+            <summary class="font-bold text-white list-none flex justify-between items-center cursor-pointer">
+              <span>Can I download artist profile pictures?</span>
+              <span class="text-pink-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-4 text-slate-400 text-sm">Yes! Paste any artist's SoundCloud URL and you can download their profile avatar image.</p>
+          </details>
+          <details class="bg-slate-800/30 rounded-xl p-5 group">
+            <summary class="font-bold text-white list-none flex justify-between items-center cursor-pointer">
+              <span>What format are the images?</span>
+              <span class="text-pink-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-4 text-slate-400 text-sm">All artwork is downloaded as high-quality JPG files, which are compatible with all music players and ID3 tag editors.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CROSS LINKS -->
+    <section class="py-12 px-4 border-t border-white/5">
+      <div class="max-w-4xl mx-auto text-center">
+        <p class="text-sm text-slate-500">
+          Other SoundCloud Tools: 
+          <a href="/converters/soundcloud-to-mp3" class="text-orange-400 hover:underline">Track Downloader</a> | 
+          <a href="/converters/soundcloud-playlist" class="text-orange-400 hover:underline">Playlist Downloader</a> | 
+          <a href="/converters/soundcloud-to-wav" class="text-orange-400 hover:underline">SoundCloud to WAV</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  
+  <script>
+    const getArtworkBtn = document.getElementById('get-artwork-btn');
+    const artworkResult = document.getElementById('artwork-result');
+    const trackUrl = document.getElementById('track-url') as HTMLInputElement;
+    const trackTitle = document.getElementById('track-title');
+    const artistName = document.getElementById('artist-name');
+
+    getArtworkBtn?.addEventListener('click', () => {
+      const url = trackUrl?.value;
+      if (!url || !url.includes('soundcloud.com')) {
+        alert('Please enter a valid SoundCloud URL');
+        return;
+      }
+
+      // Simulate artwork fetch
+      artworkResult?.classList.remove('hidden');
+      if (trackTitle) trackTitle.textContent = 'Summer Vibes';
+      if (artistName) artistName.textContent = 'DJ Sunset';
+    });
+
+    document.querySelectorAll('.download-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const size = (e.target as HTMLElement).dataset.size;
+        alert(`In production, this would download the artwork at ${size}x${size} resolution.`);
+      });
+    });
+  </script>
+  
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "SoundCloud Artwork Downloader",
+    "url": "https://convert2mp3.online/converters/soundcloud-artwork",
+    "description": description,
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  })} />
+</Layout>

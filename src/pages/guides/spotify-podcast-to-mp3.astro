@@ -1,0 +1,391 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "How to Download Spotify Podcasts as MP3 (2026 Guide)";
+const description = "Convert Spotify podcasts to MP3 for offline listening. Download Joe Rogan, Call Her Daddy, and any podcast episode for flights and commutes.";
+const publishDate = new Date('2026-01-16').toISOString();
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  
+  <main class="bg-slate-900 text-slate-200 min-h-screen pt-32 pb-24 px-4 sm:px-6 lg:px-8">
+    <article class="max-w-4xl mx-auto prose prose-invert prose-lg prose-green leading-relaxed">
+      
+      <!-- HEADER -->
+      <header class="text-center mb-16">
+        <span class="text-green-400 font-bold uppercase tracking-widest text-sm mb-4 block">Podcast Guide • 10 min read</span>
+        <h1 class="text-4xl sm:text-6xl font-black text-white mb-8 leading-tight">
+          Spotify Podcast to MP3: Complete Guide
+        </h1>
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto font-light">
+           Download your favorite podcast episodes as MP3 files for true offline listening—on flights, commutes, or anywhere without internet.
+        </p>
+      </header>
+
+      <!-- TABLE OF CONTENTS -->
+      <nav class="my-12 bg-slate-800/30 p-6 rounded-2xl border border-slate-700">
+        <h2 class="text-lg font-bold text-white mt-0 mb-4">📑 In This Guide</h2>
+        <ul class="text-sm space-y-2 not-prose columns-2">
+          <li><a href="#why-download" class="text-green-400 hover:underline">Why Download Podcasts?</a></li>
+          <li><a href="#spotify-vs-rss" class="text-green-400 hover:underline">Spotify vs RSS Feeds</a></li>
+          <li><a href="#step-by-step" class="text-green-400 hover:underline">Step-by-Step Guide</a></li>
+          <li><a href="#exclusives" class="text-green-400 hover:underline">Spotify Exclusives</a></li>
+          <li><a href="#quality" class="text-green-400 hover:underline">Audio Quality</a></li>
+          <li><a href="#alternatives" class="text-green-400 hover:underline">Alternative Methods</a></li>
+          <li><a href="#troubleshooting" class="text-green-400 hover:underline">Troubleshooting</a></li>
+          <li><a href="#faq" class="text-green-400 hover:underline">FAQ (8 Questions)</a></li>
+        </ul>
+      </nav>
+      
+      <!-- INTRO -->
+      <p>
+        Spotify has become a major podcast platform, hosting exclusive shows like <strong>The Joe Rogan Experience</strong>, <strong>Call Her Daddy</strong>, <strong>Armchair Expert</strong>, and thousands of niche podcasts. For many shows, Spotify is the only place to listen.
+      </p>
+      <p>
+        But what if you want to listen during a 12-hour flight? In a subway tunnel? While hiking in areas with no cell service? Spotify's offline mode works, but those downloads are locked to the app and expire when your subscription ends.
+      </p>
+      <p>
+        This guide shows you how to convert Spotify podcast episodes to universal MP3 files that work anywhere, forever.
+      </p>
+
+      <!-- WHY DOWNLOAD PODCASTS -->
+      <div id="why-download" class="my-16 bg-slate-800/50 p-8 rounded-3xl relative overflow-hidden">
+        <div class="absolute inset-0 bg-green-500/5 patterned-grid pointer-events-none"></div>
+        <h2 class="text-3xl font-bold text-white mb-6 relative z-10">Why Download Podcasts as MP3?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
+            <div class="bg-slate-900/50 p-6 rounded-xl">
+                <h3 class="text-xl font-bold text-green-400 mb-2 mt-0">✈️ True Airplane Mode</h3>
+                <p class="text-slate-300 text-sm">MP3 files work without any app, account, or internet. Perfect for long flights where you want entertainment without draining battery on Spotify's app overhead.</p>
+            </div>
+            <div class="bg-slate-900/50 p-6 rounded-xl">
+                <h3 class="text-xl font-bold text-green-400 mb-2 mt-0">💾 Permanent Archive</h3>
+                <p class="text-slate-300 text-sm">Podcast episodes get deleted. Hosts remove old content. Spotify exclusives can disappear. MP3 means you keep your favorite episodes forever.</p>
+            </div>
+            <div class="bg-slate-900/50 p-6 rounded-xl">
+                <h3 class="text-xl font-bold text-green-400 mb-2 mt-0">📱 Any Device</h3>
+                <p class="text-slate-300 text-sm">Play on old iPods, car USB ports, fitness watches, Garmin devices, or any MP3 player. No Spotify app required.</p>
+            </div>
+            <div class="bg-slate-900/50 p-6 rounded-xl">
+                <h3 class="text-xl font-bold text-green-400 mb-2 mt-0">⏩ Better Playback Control</h3>
+                <p class="text-slate-300 text-sm">Use any audio player with variable speed. Listen at 2x, 3x, or use apps with smart speed that trims silences—features Spotify doesn't offer.</p>
+            </div>
+            <div class="bg-slate-900/50 p-6 rounded-xl">
+                <h3 class="text-xl font-bold text-green-400 mb-2 mt-0">🔋 Battery Savings</h3>
+                <p class="text-slate-300 text-sm">A simple MP3 player app uses far less battery than Spotify's full app. Critical for long travel days or older devices.</p>
+            </div>
+            <div class="bg-slate-900/50 p-6 rounded-xl">
+                <h3 class="text-xl font-bold text-green-400 mb-2 mt-0">🚫 No Ads (Sometimes)</h3>
+                <p class="text-slate-300 text-sm">Downloaded MP3s capture just the audio—Spotify-inserted ads may not be included. (Host-read ads baked into episodes will remain.)</p>
+            </div>
+        </div>
+      </div>
+
+      <!-- SPOTIFY VS RSS -->
+      <h2 id="spotify-vs-rss" class="text-3xl font-bold text-white mt-16 mb-8 text-center">Spotify Podcasts vs. <span class="text-green-400">RSS Feeds</span></h2>
+      
+      <p>Before we dive in, it's important to understand the two types of podcasts on Spotify:</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
+        <div class="bg-slate-800 p-8 rounded-2xl border-t-4 border-green-500">
+            <h3 class="text-xl font-bold text-white mb-4 mt-0">Regular Podcasts (RSS-Based)</h3>
+            <p class="text-slate-400 text-sm mb-4">
+                Most podcasts on Spotify also exist on Apple Podcasts, Google Podcasts, and have public RSS feeds. Spotify is just one of many places to listen.
+            </p>
+            <p class="text-green-400 text-xs font-medium">✓ Easier to download—often have official MP3 links</p>
+            <p class="text-green-400 text-xs font-medium">✓ Available on multiple platforms</p>
+        </div>
+        <div class="bg-slate-800 p-8 rounded-2xl border-t-4 border-amber-500">
+            <h3 class="text-xl font-bold text-white mb-4 mt-0">Spotify Exclusives</h3>
+            <p class="text-slate-400 text-sm mb-4">
+                Some podcasts are <em>only</em> available on Spotify—no RSS feed, no other platforms. Joe Rogan, Call Her Daddy, etc. These are harder to convert.
+            </p>
+            <p class="text-amber-400 text-xs font-medium">⚠️ Conversion success varies</p>
+            <p class="text-amber-400 text-xs font-medium">⚠️ May have DRM protection</p>
+        </div>
+      </div>
+      
+      <div class="bg-slate-800/50 p-6 rounded-xl">
+        <h3 class="text-lg font-bold text-white mb-3 mt-0">💡 Pro Tip: Check for RSS First</h3>
+        <p class="text-slate-400 text-sm">
+            Before using a converter, search "[podcast name] RSS feed" on Google. Many podcasts have official websites with direct MP3 download links—higher quality and guaranteed to work.
+        </p>
+      </div>
+
+      <!-- STEP BY STEP -->
+      <h2 id="step-by-step" class="text-3xl font-bold text-white mt-16 mb-8 text-center">Step-by-Step: Download Spotify Podcasts</h2>
+      
+      <ol class="space-y-10 text-slate-400 not-prose">
+          <li class="flex gap-6 items-start">
+              <span class="flex-shrink-0 w-14 h-14 rounded-full bg-green-600 flex items-center justify-center font-bold text-white text-xl shadow-lg shadow-green-500/30">1</span>
+              <div>
+                  <strong class="text-white block text-xl mb-2">Find the Specific Episode</strong>
+                  <p class="text-sm leading-relaxed mb-3">Open Spotify and navigate to the podcast show. Find the <em>specific episode</em> you want—not the show page, but the individual episode.</p>
+                  <div class="bg-slate-800/50 p-4 rounded-lg text-xs">
+                      <strong class="text-green-400">Important:</strong> Copy the episode link, not the show link. Episode URLs contain "episode" in the path.
+                  </div>
+              </div>
+          </li>
+          <li class="flex gap-6 items-start">
+              <span class="flex-shrink-0 w-14 h-14 rounded-full bg-green-600 flex items-center justify-center font-bold text-white text-xl shadow-lg shadow-green-500/30">2</span>
+              <div>
+                  <strong class="text-white block text-xl mb-2">Copy the Episode Link</strong>
+                  <p class="text-sm leading-relaxed mb-3">Click the <strong>···</strong> menu → <strong>Share</strong> → <strong>Copy Episode Link</strong>.</p>
+                  <p class="text-xs text-slate-500">The link should look like: <code>open.spotify.com/episode/xxxxx</code></p>
+              </div>
+          </li>
+          <li class="flex gap-6 items-start">
+              <span class="flex-shrink-0 w-14 h-14 rounded-full bg-green-600 flex items-center justify-center font-bold text-white text-xl shadow-lg shadow-green-500/30">3</span>
+              <div>
+                  <strong class="text-white block text-xl mb-2">Visit Convert2MP3</strong>
+                  <p class="text-sm leading-relaxed mb-3">Go to our <a href="/converters/spotify-to-mp3" class="text-green-400 hover:underline font-medium">Spotify to MP3 Converter</a>. The same tool works for both music and podcasts.</p>
+              </div>
+          </li>
+          <li class="flex gap-6 items-start">
+              <span class="flex-shrink-0 w-14 h-14 rounded-full bg-green-600 flex items-center justify-center font-bold text-white text-xl shadow-lg shadow-green-500/30">4</span>
+              <div>
+                  <strong class="text-white block text-xl mb-2">Paste & Convert</strong>
+                  <p class="text-sm leading-relaxed mb-3">Paste the episode URL and click <strong>Start</strong>. For longer episodes (1-3 hours), processing may take up to a minute.</p>
+                  <p class="text-xs text-slate-500">💡 Use Standard quality for speech—it's smaller and sounds identical.</p>
+              </div>
+          </li>
+          <li class="flex gap-6 items-start">
+              <span class="flex-shrink-0 w-14 h-14 rounded-full bg-green-600 flex items-center justify-center font-bold text-white text-xl shadow-lg shadow-green-500/30">5</span>
+              <div>
+                  <strong class="text-white block text-xl mb-2">Download Your Episode</strong>
+                  <p class="text-sm leading-relaxed">Click <strong>Download MP3</strong>. Transfer to any device—phone, MP3 player, USB drive for your car.</p>
+              </div>
+          </li>
+      </ol>
+
+      <!-- EXCLUSIVES -->
+      <div id="exclusives" class="my-16 bg-amber-900/20 p-8 rounded-3xl border border-amber-500/30">
+        <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3 mt-0">
+            ⚠️ About Spotify Exclusive Podcasts
+        </h2>
+        <p class="text-slate-300 mb-4">
+            Spotify-exclusive podcasts (like Joe Rogan Experience) use special protection and don't have public RSS feeds. Here's what to expect:
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-slate-900/30 p-4 rounded-lg">
+                <h4 class="text-green-400 font-bold mb-2 mt-0">What Usually Works:</h4>
+                <ul class="text-slate-300 text-sm space-y-1">
+                    <li>✓ Older episodes from before exclusivity</li>
+                    <li>✓ Video podcast clips shared elsewhere</li>
+                    <li>✓ Episodes that also exist on YouTube</li>
+                </ul>
+            </div>
+            <div class="bg-slate-900/30 p-4 rounded-lg">
+                <h4 class="text-red-400 font-bold mb-2 mt-0">What May Not Work:</h4>
+                <ul class="text-slate-300 text-sm space-y-1">
+                    <li>✗ Brand new exclusive episodes</li>
+                    <li>✗ Content behind paywall (Spotify Premium)</li>
+                    <li>✗ Episodes with active DRM</li>
+                </ul>
+            </div>
+        </div>
+        
+        <p class="text-slate-400 text-sm mt-6">
+            <strong>Alternative:</strong> For Spotify exclusives, check if clips are on YouTube. Full JRE episodes, for example, are often uploaded to the official YouTube channel.
+        </p>
+      </div>
+
+      <!-- QUALITY -->
+      <h2 id="quality" class="text-3xl font-bold text-white mt-16 mb-8 text-center">Audio Quality for Podcasts</h2>
+      
+      <p>Good news: podcasts don't need high bitrates. Speech audio sounds great even at lower quality settings:</p>
+      
+      <div class="overflow-x-auto my-8">
+        <table class="w-full text-left border-collapse not-prose">
+            <thead>
+                <tr class="border-b border-slate-700">
+                    <th class="py-4 px-4 text-slate-400 font-medium uppercase text-xs tracking-wider">Quality</th>
+                    <th class="py-4 px-4 text-slate-400 font-medium uppercase text-xs tracking-wider">Bitrate</th>
+                    <th class="py-4 px-4 text-slate-400 font-medium uppercase text-xs tracking-wider">1-Hour Episode Size</th>
+                    <th class="py-4 px-4 text-slate-400 font-medium uppercase text-xs tracking-wider">Best For</th>
+                </tr>
+            </thead>
+            <tbody class="text-slate-300 text-sm">
+                <tr class="border-b border-slate-800 hover:bg-slate-800/50">
+                    <td class="py-4 px-4 font-bold text-green-400">Standard</td>
+                    <td class="py-4 px-4">96-128 kbps</td>
+                    <td class="py-4 px-4">~50-70 MB</td>
+                    <td class="py-4 px-4">Speech, interviews, talk shows ⭐</td>
+                </tr>
+                <tr class="hover:bg-slate-800/50">
+                    <td class="py-4 px-4 font-bold text-amber-400">High Quality</td>
+                    <td class="py-4 px-4">192-320 kbps</td>
+                    <td class="py-4 px-4">~100-170 MB</td>
+                    <td class="py-4 px-4">Music podcasts, production-heavy shows</td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+      
+      <div class="bg-slate-800/50 p-6 rounded-xl">
+        <h3 class="text-lg font-bold text-white mb-3 mt-0">💡 Save Storage Space</h3>
+        <p class="text-slate-400 text-sm">
+            For pure speech content (interviews, news, talk shows), 96-128kbps is indistinguishable from higher bitrates. Only choose High Quality if the podcast has significant music segments or you're an audiophile archiving content.
+        </p>
+      </div>
+
+      <!-- ALTERNATIVES -->
+      <h2 id="alternatives" class="text-3xl font-bold text-white mt-16 mb-8 text-center">Alternative Methods</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 not-prose">
+          <div class="bg-slate-800 p-8 rounded-2xl border-t-4 border-green-500">
+              <h3 class="text-xl font-bold text-white mb-4 mt-0">Official Podcast Websites</h3>
+              <p class="text-slate-400 text-sm mb-4">Many podcasts publish on their own websites with direct MP3 download links. Search "[podcast name] official website" or "[podcast name] RSS feed".</p>
+              <p class="text-green-400 text-xs font-medium">✓ Highest quality, direct from source</p>
+              <p class="text-green-400 text-xs font-medium">✓ Always works</p>
+          </div>
+          <div class="bg-slate-800 p-8 rounded-2xl border-t-4 border-blue-500">
+              <h3 class="text-xl font-bold text-white mb-4 mt-0">Podcast Apps with Downloads</h3>
+              <p class="text-slate-400 text-sm mb-4">Apps like Pocket Casts, Overcast, or Apple Podcasts let you download episodes for offline listening (for non-Spotify-exclusive shows).</p>
+              <p class="text-blue-400 text-xs font-medium">✓ Built-in offline mode</p>
+              <p class="text-amber-400 text-xs font-medium">⚠️ Locked to the app</p>
+          </div>
+          <div class="bg-slate-800 p-8 rounded-2xl border-t-4 border-violet-500">
+              <h3 class="text-xl font-bold text-white mb-4 mt-0">YouTube Audio</h3>
+              <p class="text-slate-400 text-sm mb-4">Many podcasts also upload to YouTube. You can use audio extraction tools to download just the audio from video podcast uploads.</p>
+              <p class="text-violet-400 text-xs font-medium">✓ Works for video podcasts</p>
+              <p class="text-violet-400 text-xs font-medium">✓ Often higher quality</p>
+          </div>
+          <div class="bg-slate-800 p-8 rounded-2xl border-t-4 border-orange-500">
+              <h3 class="text-xl font-bold text-white mb-4 mt-0">RSS Feed Readers</h3>
+              <p class="text-slate-400 text-sm mb-4">Tools like gpodder or Podcast Addict can subscribe to RSS feeds and download episodes directly as MP3 files.</p>
+              <p class="text-orange-400 text-xs font-medium">✓ Automatic downloads</p>
+              <p class="text-amber-400 text-xs font-medium">⚠️ Doesn't work for Spotify exclusives</p>
+          </div>
+      </div>
+
+      <!-- TROUBLESHOOTING -->
+      <h2 id="troubleshooting" class="text-3xl font-bold text-white mt-16 mb-8 text-center">Troubleshooting</h2>
+      
+      <div class="space-y-6 not-prose">
+        <div class="bg-slate-800/50 p-6 rounded-xl border-l-4 border-red-500">
+            <h3 class="text-lg font-bold text-white mb-2 mt-0">❌ "Episode not found" error</h3>
+            <p class="text-slate-400 text-sm mb-2"><strong>Cause:</strong> The episode may be Spotify-exclusive with DRM, or the link is for the show page instead of a specific episode.</p>
+            <p class="text-slate-300 text-sm"><strong>Solution:</strong> Make sure you're copying the <em>episode</em> link (contains "episode" in URL). For exclusives, try finding the episode on YouTube instead.</p>
+        </div>
+        
+        <div class="bg-slate-800/50 p-6 rounded-xl border-l-4 border-amber-500">
+            <h3 class="text-lg font-bold text-white mb-2 mt-0">⚠️ Processing takes forever</h3>
+            <p class="text-slate-400 text-sm mb-2"><strong>Cause:</strong> Long podcast episodes (2-3 hours) take more time to process.</p>
+            <p class="text-slate-300 text-sm"><strong>Solution:</strong> Be patient. A 3-hour episode can take 1-2 minutes. If it exceeds 5 minutes, refresh and try again.</p>
+        </div>
+        
+        <div class="bg-slate-800/50 p-6 rounded-xl border-l-4 border-blue-500">
+            <h3 class="text-lg font-bold text-white mb-2 mt-0">🔇 Audio quality seems low</h3>
+            <p class="text-slate-400 text-sm mb-2"><strong>Cause:</strong> Podcasts are natively recorded at lower bitrates than music (by design).</p>
+            <p class="text-slate-300 text-sm"><strong>Solution:</strong> This is normal! 96-128kbps is standard for podcasts. Speech sounds fine at these bitrates—it's not the same as music.</p>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <h2 id="faq" class="text-3xl font-bold text-white mt-16 mb-8 text-center">Frequently Asked Questions</h2>
+      
+      <div class="space-y-4 not-prose">
+        <details class="bg-slate-800/50 rounded-xl p-6 group">
+            <summary class="font-bold text-white list-none flex justify-between items-center cursor-pointer">
+                <span>Can I download Joe Rogan episodes?</span>
+                <span class="text-green-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-4 text-slate-400 text-sm">JRE is Spotify-exclusive and has special protections. Results vary—older episodes and clips often work; newer exclusive episodes may not. Check the official JRE YouTube channel for video versions you can convert.</p>
+        </details>
+        
+        <details class="bg-slate-800/50 rounded-xl p-6 group">
+            <summary class="font-bold text-white list-none flex justify-between items-center cursor-pointer">
+                <span>Why is the file size so small?</span>
+                <span class="text-green-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-4 text-slate-400 text-sm">Podcasts are speech audio compressed at lower bitrates than music. A 1-hour episode might only be 50-80MB—this is normal and sounds great for speech. Music files are larger because they need higher bitrates to sound good.</p>
+        </details>
+        
+        <details class="bg-slate-800/50 rounded-xl p-6 group">
+            <summary class="font-bold text-white list-none flex justify-between items-center cursor-pointer">
+                <span>Is downloading podcasts legal?</span>
+                <span class="text-green-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-4 text-slate-400 text-sm">Podcasts are generally free content supported by ads or Patreon. Downloading for personal offline use is widely tolerated. Don't redistribute or monetize downloaded content.</p>
+        </details>
+        
+        <details class="bg-slate-800/50 rounded-xl p-6 group">
+            <summary class="font-bold text-white list-none flex justify-between items-center cursor-pointer">
+                <span>Can I download entire podcast seasons?</span>
+                <span class="text-green-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-4 text-slate-400 text-sm">Our tool works with individual episodes—paste one episode link at a time. For bulk downloading, consider using an RSS feed reader like gpodder if the podcast has a public feed.</p>
+        </details>
+        
+        <details class="bg-slate-800/50 rounded-xl p-6 group">
+            <summary class="font-bold text-white list-none flex justify-between items-center cursor-pointer">
+                <span>Will the ads be included?</span>
+                <span class="text-green-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-4 text-slate-400 text-sm">It depends. Host-read ads that are baked into the original recording will be included. Dynamic ads inserted by Spotify during playback may or may not be captured—results vary.</p>
+        </details>
+        
+        <details class="bg-slate-800/50 rounded-xl p-6 group">
+            <summary class="font-bold text-white list-none flex justify-between items-center cursor-pointer">
+                <span>How do I find the official RSS feed?</span>
+                <span class="text-green-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-4 text-slate-400 text-sm">Search Google for "[podcast name] RSS feed" or visit the podcast's official website. Look for an RSS icon or "Subscribe" links. Paste the RSS URL into Apple Podcasts or a podcast app to access direct downloads.</p>
+        </details>
+        
+        <details class="bg-slate-800/50 rounded-xl p-6 group">
+            <summary class="font-bold text-white list-none flex justify-between items-center cursor-pointer">
+                <span>Can I speed up the MP3 after downloading?</span>
+                <span class="text-green-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-4 text-slate-400 text-sm">Yes! Any audio player with speed controls works. VLC (free) lets you play at 0.5x-4x speed. Podcast apps like Overcast have "Smart Speed" that trims silences. That's one benefit of MP3—more playback options than Spotify.</p>
+        </details>
+        
+        <details class="bg-slate-800/50 rounded-xl p-6 group">
+            <summary class="font-bold text-white list-none flex justify-between items-center cursor-pointer">
+                <span>Does this work with Spotify video podcasts?</span>
+                <span class="text-green-400 group-open:rotate-180 transition-transform">▼</span>
+            </summary>
+            <p class="mt-4 text-slate-400 text-sm">Our tool extracts audio only. For video podcasts, you'll get just the audio track as an MP3. If you want the video too, check if the podcast uploads to YouTube.</p>
+        </details>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-16 text-center">
+        <p class="text-lg text-slate-400 mb-8">
+            Ready to take your podcasts offline?
+        </p>
+        <a href="/converters/spotify-to-mp3" class="inline-flex items-center gap-3 px-8 py-4 bg-green-600 hover:bg-green-500 text-white font-bold rounded-xl transition-all shadow-lg shadow-green-500/20 hover:shadow-green-500/40">
+            🎙️ Convert Spotify Podcast to MP3
+        </a>
+        
+        <p class="text-slate-500 text-sm mt-6">
+            Also check out: <a href="/guides/spotify-to-mp3" class="text-green-400 hover:underline">Spotify Music Guide</a> • <a href="/guides/soundcloud-to-mp3" class="text-orange-400 hover:underline">SoundCloud Guide</a>
+        </p>
+      </div>
+
+      <!-- ARTICLE SCHEMA -->
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": title,
+        "description": description,
+        "image": ["https://convert2mp3.online/og-image.jpg"],
+        "datePublished": publishDate,
+        "dateModified": new Date().toISOString(),
+        "author": [{
+            "@type": "Organization",
+            "name": "Convert2MP3 Team",
+            "url": "https://convert2mp3.online"
+        }],
+        "wordCount": 2200
+      })} />
+    </article>
+  </main>
+  
+  <Footer />
+</Layout>

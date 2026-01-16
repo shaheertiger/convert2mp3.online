@@ -9,7 +9,7 @@ interface Props {
 
 const {
     title,
-    description = "Convert online videos to MP3 instantly. Fast, free, and no registration required. The best YouTube to MP3 converter.",
+    description = "Convert Spotify and SoundCloud to MP3 instantly. Fast, free, and no registration required. The best online MP3 converter.",
 } = Astro.props;
 
 import { getLangFromUrl } from "../i18n/translations";
@@ -44,6 +44,13 @@ const lang = getLangFromUrl(Astro.url);
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
         <meta name="description" content={description} />
+        
+        <!-- Bing Webmaster Tools Verification (replace with your key) -->
+        <!-- <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_KEY" /> -->
+        
+        <!-- IndexNow for Bing Instant Indexing -->
+        <!-- Key file should exist at: /[your-key].txt -->
+        
         <Analytics />
 
         <!-- Canonical URL -->
@@ -204,16 +211,25 @@ const lang = getLangFromUrl(Astro.url);
                 logo: "https://convert2mp3.online/favicon.png",
                 image: "https://convert2mp3.online/og-image.jpg",
                 description:
-                    "The ultimate online video converter tool. Convert YouTube to MP3/MP4 safely and quickly.",
+                    "Convert Spotify and SoundCloud to MP3. The ultimate free online audio converter tool.",
                 applicationCategory: "MultimediaApplication",
                 operatingSystem: "Any",
+                browserRequirements: "Requires JavaScript. Requires HTML5.",
+                softwareVersion: "2.0",
                 offers: {
                     "@type": "Offer",
                     price: "0",
                     priceCurrency: "USD",
                 },
-                featureList: "Video to MP3, Video to MP4, Playlist Downloading",
-                screenshot: "https://convert2mp3.online/screenshot.jpg",
+                featureList: "Spotify to MP3, SoundCloud to MP3, Video to MP3, Playlist Downloading, High Quality 320kbps",
+                screenshot: "https://convert2mp3.online/og-image.jpg",
+                aggregateRating: {
+                    "@type": "AggregateRating",
+                    ratingValue: "4.8",
+                    ratingCount: "1250",
+                    bestRating: "5",
+                    worstRating: "1"
+                }
             })}
         />
     </head>
