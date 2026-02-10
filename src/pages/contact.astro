@@ -1,0 +1,126 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Contact Us - Convert2MP3" description="Get in touch with the Convert2MP3 team. We're here to help with questions, feedback, and support.">
+  <Header />
+
+  <main class="flex-grow pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl font-bold text-white mb-4">Contact Us</h1>
+      <p class="text-white/60 leading-relaxed mb-10">
+        We value your feedback and are here to help. Whether you have a question about our service, need technical support, or want to share a suggestion, please reach out to us using the information below.
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-6 mb-12">
+        <!-- Email -->
+        <div class="bg-slate-800/50 rounded-2xl p-6 border border-white/5">
+          <div class="w-12 h-12 rounded-xl bg-violet-600/20 flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-violet-400">
+              <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+              <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+            </svg>
+          </div>
+          <h2 class="text-lg font-bold text-white mb-2">Email</h2>
+          <p class="text-white/60 text-sm mb-3">For general inquiries and support</p>
+          <a href="mailto:contact@convert2mp3.online" class="text-violet-400 hover:text-violet-300 transition-colors font-medium">
+            contact@convert2mp3.online
+          </a>
+        </div>
+
+        <!-- Response Time -->
+        <div class="bg-slate-800/50 rounded-2xl p-6 border border-white/5">
+          <div class="w-12 h-12 rounded-xl bg-violet-600/20 flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-violet-400">
+              <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <h2 class="text-lg font-bold text-white mb-2">Response Time</h2>
+          <p class="text-white/60 text-sm mb-3">We aim to respond to all inquiries</p>
+          <p class="text-violet-400 font-medium">Within 24-48 hours</p>
+        </div>
+      </div>
+
+      <!-- What to Contact About -->
+      <section class="bg-slate-800/50 rounded-2xl p-8 border border-white/5 mb-8">
+        <h2 class="text-2xl font-bold text-white mb-6">How Can We Help?</h2>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-lg bg-emerald-600/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-emerald-400">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold">General Questions</h3>
+              <p class="text-white/60 text-sm">Questions about how the service works, supported formats, or features.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-lg bg-blue-600/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-blue-400">
+                <path fill-rule="evenodd" d="M4.5 2A1.5 1.5 0 003 3.5v13A1.5 1.5 0 004.5 18h11a1.5 1.5 0 001.5-1.5V7.621a1.5 1.5 0 00-.44-1.06l-4.12-4.122A1.5 1.5 0 0011.378 2H4.5z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold">Technical Support</h3>
+              <p class="text-white/60 text-sm">Issues with conversions, errors, or technical problems.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-lg bg-amber-600/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-amber-400">
+                <path d="M10 1a6 6 0 00-3.815 10.631C7.237 12.5 8 13.443 8 14.456v.644a.75.75 0 00.75.75h2.5a.75.75 0 00.75-.75v-.644c0-1.013.762-1.957 1.815-2.825A6 6 0 0010 1z" />
+                <path d="M11.25 18a.75.75 0 00-.75-.75h-1a.75.75 0 000 1.5h1a.75.75 0 00.75-.75z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold">Feature Requests</h3>
+              <p class="text-white/60 text-sm">Ideas for new features or improvements to the service.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-lg bg-rose-600/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-rose-400">
+                <path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold">Copyright / DMCA Concerns</h3>
+              <p class="text-white/60 text-sm">Copyright-related inquiries or DMCA takedown requests. See our <a href="/dmca" class="text-violet-400 hover:text-violet-300">DMCA Policy</a>.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 rounded-lg bg-violet-600/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 text-violet-400">
+                <path d="M3.196 12.87l-.825.483a.75.75 0 000 1.294l7.004 4.086a1.75 1.75 0 001.75 0l7.004-4.086a.75.75 0 000-1.294l-.825-.483-5.53 3.227a3.25 3.25 0 01-3.248 0L3.196 12.87z" />
+                <path d="M3.196 8.87l-.825.483a.75.75 0 000 1.294l7.004 4.086a1.75 1.75 0 001.75 0l7.004-4.086a.75.75 0 000-1.294l-.825-.483-5.53 3.227a3.25 3.25 0 01-3.248 0L3.196 8.87z" />
+                <path d="M10.625 2.247a1.75 1.75 0 00-1.75 0L1.871 6.333a.75.75 0 000 1.294l7.004 4.086a1.75 1.75 0 001.75 0l7.004-4.086a.75.75 0 000-1.294l-7.004-4.086z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-white font-semibold">Business & Partnership Inquiries</h3>
+              <p class="text-white/60 text-sm">Collaboration, advertising, or business-related inquiries.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Reference -->
+      <div class="text-center bg-gradient-to-r from-violet-600/10 to-indigo-600/10 rounded-2xl p-8 border border-violet-500/20">
+        <h2 class="text-xl font-bold text-white mb-3">Looking for Quick Answers?</h2>
+        <p class="text-white/60 mb-4">Check out our FAQ page for answers to the most commonly asked questions.</p>
+        <a href="/faq" class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-xl transition-colors">
+          Visit FAQ
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+            <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
