@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Analytics from "@vercel/analytics/astro";
+import CookieConsent from "../components/CookieConsent.astro";
 
 interface Props {
     title: string;
@@ -52,6 +53,13 @@ const lang = getLangFromUrl(Astro.url);
         <!-- Key file should exist at: /[your-key].txt -->
         
         <Analytics />
+
+        <!-- Google AdSense -->
+        <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6957094173303840"
+            crossorigin="anonymous"
+        ></script>
 
         <!-- Canonical URL -->
         <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
@@ -237,5 +245,6 @@ const lang = getLangFromUrl(Astro.url);
         class="bg-brand-dark text-white min-h-screen flex flex-col font-body antialiased selection:bg-brand-red selection:text-white overflow-x-hidden"
     >
         <slot />
+        <CookieConsent />
     </body>
 </html>

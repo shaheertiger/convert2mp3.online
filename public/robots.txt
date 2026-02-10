@@ -1,4 +1,16 @@
-# 2026 Standard Robots.txt - Optimized for Google & Bing
+# 2026 Standard Robots.txt - Optimized for Google, Bing & AdSense
+
+# ============================================
+# GOOGLE-SPECIFIC RULES (including AdSense crawlers)
+# ============================================
+User-agent: Googlebot
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
 
 # ============================================
 # BING-SPECIFIC RULES (Bing reads top-to-bottom)
